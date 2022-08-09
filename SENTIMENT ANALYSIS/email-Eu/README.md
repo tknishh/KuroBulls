@@ -42,5 +42,6 @@ example-times.txt
 21
 
 
+Source: https://www.cs.cornell.edu/~arb/data/email-Eu/
 
 For problems, please contact Austin Benson at arb@cs.cornell.edu.
