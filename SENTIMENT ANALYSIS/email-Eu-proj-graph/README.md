@@ -9,7 +9,7 @@ i j w
 
 The two nodes of the undirected edge are i and j and the weight is w.
 
-
+Source: https://www.cs.cornell.edu/~arb/data/email-Eu/
 
 For problems, please contact Austin Benson at arb@cs.cornell.edu.
 
