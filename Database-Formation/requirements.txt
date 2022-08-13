@@ -1,0 +1,4 @@
+tldextract
+py3dns
+pyspf
+beautifulsoup4
