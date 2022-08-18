@@ -14,3 +14,6 @@ This file contains script that is a combination of all the files mentioned above
 
 ### 5. Email_Connection_Analysis_data
 This file contains all the above mentioned code and goves the ouptut in a dataframe.
+
+### 6.final
+This file contains the results generated from Email Connection Ananlysis file
