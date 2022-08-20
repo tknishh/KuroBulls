@@ -1,0 +1,165 @@
+Delivered-To: sirdonaldfrancesco015@gmail.com
+Received: by 2002:a05:6359:4287:b0:b3:862c:9b88 with SMTP id kp7csp1338804rwb;
+        Mon, 15 Aug 2022 04:41:11 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR4y9S0lDUjYhWsRinlnKBxK5JnuxtkAB+tskFseI4VXcF8ceZAgMbOOPqyi+uWbTzl/sZoP
+X-Received: by 2002:a05:6214:5198:b0:475:4e71:6fee with SMTP id kl24-20020a056214519800b004754e716feemr13397186qvb.75.1660563671098;
+        Mon, 15 Aug 2022 04:41:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1660563671; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sIqwK1C+kKvWq11e4lFGVxC2UQPsj3i0bPFh4oYAcIwgsay975gbE45Sp3zIiPPrJG
+         xTPVjHO6rOWzPkVT5ENcVAA4KRxiYYrRNPrePwxrj1cu/IUn/ZBAjS+I79RC4prtyea/
+         I/m2nWwOtl7lKyH19GxxGQRtw4RU2BfUZWSeznwc/VC1VRm0qHGOuFwoJWkvY3gbNldI
+         WMPuBPVwbt2ZeRzH5HFBB+PfemHJSJjfVytNKr1lqehD+BdKElXVzZyb6SgRjnMZdW4M
+         3sFsk73MdX4NxjMO0oiI3vGEsGSeBGdDQCZH8/k+0aWi7fgWYcbnB/RjxUMjzG4/ugOc
+         vhYw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=date:message-id:mime-version:feedback-id:subject:reply-to:from:to
+         :domainkey-signature:dkim-signature;
+        bh=hKEya3EajUvPAfEGnBEfu94K+z50umwy81CGVxk/aic=;
+        b=J/MKrOClrKBt3tdvD5skAU+dy1sj0z/ynvrA2oWd7jNE5w9xu1UfwuGwk/hK8JvXEA
+         sqBW00dFG3hVXAJ9onuSsm8UxY6sSWhZQ3h2irB6LtnC3U22lbkzYE3w6Ew+dHsH6D2/
+         djB1VqkDrgLQu3hjhaBZKLIgUX6qDRUzkNMADY12mPc+10ELFE2z8OW+j15CBz3gQfI3
+         HpZd7Z7057SQXNbt1OUAMKDHEvDNgvf51CTa27PwlZScjkViozi+OngjPIUX8bxqZLEH
+         iBqUu8z/Az9WCeZZO4uOxLXBMDKCYzmn462GC9YNQBPe9nDjakDwJQvlzV8gRtV/NSOr
+         D5ug==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@myntra.com header.s=ncfal header.b=jN1Me9IH;
+       spf=pass (google.com: domain of campaign-myntrabuyercom-96861-3577-42766653-sirdonaldfrancesco015=gmail.com@myntrakart.myntra.com designates 175.158.66.254 as permitted sender) smtp.mailfrom="campaign-myntrabuyercom-96861-3577-42766653-sirdonaldfrancesco015=gmail.com@myntrakart.myntra.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=myntra.com
+Return-Path: <campaign-myntrabuyercom-96861-3577-42766653-sirdonaldfrancesco015=gmail.com@myntrakart.myntra.com>
+Received: from mta6-66.254.ptransmail.com (mta6-66.254.ptransmail.com. [175.158.66.254])
+        by mx.google.com with ESMTPS id ff22-20020a05622a4d9600b0034460156435si1339672qtb.637.2022.08.15.04.41.10
+        for <sirdonaldfrancesco015@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 15 Aug 2022 04:41:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of campaign-myntrabuyercom-96861-3577-42766653-sirdonaldfrancesco015=gmail.com@myntrakart.myntra.com designates 175.158.66.254 as permitted sender) client-ip=175.158.66.254;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@myntra.com header.s=ncfal header.b=jN1Me9IH;
+       spf=pass (google.com: domain of campaign-myntrabuyercom-96861-3577-42766653-sirdonaldfrancesco015=gmail.com@myntrakart.myntra.com designates 175.158.66.254 as permitted sender) smtp.mailfrom="campaign-myntrabuyercom-96861-3577-42766653-sirdonaldfrancesco015=gmail.com@myntrakart.myntra.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=myntra.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=ncfal; d=myntra.com;
+ h=To:From:Reply-To:Subject:Feedback-ID:MIME-Version:Content-Type:Message-ID:Date:from:to:subject;
+ bh=hKEya3EajUvPAfEGnBEfu94K+z50umwy81CGVxk/aic=;
+ b=jN1Me9IH4C+sVwou7mRIdNr8657mpkKLzFKCQyTnr4SucmedyAAnSltiviAypc8wqIKvfgV710ir
+   9dViSwC2MVrZ2gXyJQ1soojgaOlRm65z+7aC7mXohBgKbC5TIKKnx2HPwXzUA9g8vanZU8vfOhbH
+   WE6ZAfkgKvDGzwGQbgQ=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=ncfal; d=myntra.com;
+ b=gak2mjhlMjWJMIF/MQm6GtgjMR2gv/4zjPxiddCPgIym0dtGmZhPpgVMqD9pNhISTh/G4JL9Wa32
+   rjom92LQY+tff+ejiuaNFe2Vri3WIJMpjgZxJzW3J+Y4r9hRCfxq731IRylpmiTBBhH9YUa48y0S
+   ro8t7bQKTUPDx0tlOik=;
+To: sirdonaldfrancesco015@gmail.com
+From: Myntra <updates@myntra.com>
+Reply-To: Myntra <updates@myntra.com>
+Subject: =?UTF-8?Q?Happy_Independence_Day_=F0=9F=87=AE=F0=9F=87=B3?=
+Feedback-ID: 3577:96861:20220815154748:nczc
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_21d9126a096b9bc0a873aab87cce782e"
+Message-ID: <0.0.264.4E.1D8B09BEA580FFA.0@mta6-66.254.ptransmail.com>
+Date: Mon, 15 Aug 2022 17:11:11 +0530
+
+
+
+
+--b1_21d9126a096b9bc0a873aab87cce782e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+Email Template 
+
+ Click to celebrate in style! 
+
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4CRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjFfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4FRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjJfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4ERQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjNfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4HRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjRfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy>
+
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4GRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlkdVkFAVUlUUhFfClZbT0ZMX0sE&ext=c29ydD1uZXcmdXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI1X2J1eWVyc19mdWxsXzE1YXVnMjAyMg==>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4JRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlwLVVAfUhFAXQtEC1BbBRhVVVcU&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI2X2J1eWVyc19mdWxsXzE1YXVnMjAyMg==>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4IRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFkQBSkZdWgVeHgFWEVw=&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI3X2J1eWVyc19mdWxsXzE1YXVnMjAyMg==>
+
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8BRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlUHW1BBRwtAWgdE&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI4X2J1eWVyc19mdWxsXzE1YXVnMjAyMg==>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8ARQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlILV0FFUQVA&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI5X2J1eWVyc19mdWxsXzE1YXVnMjAyMg==>
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8DRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFkQITUYfRw1IVg==&ext=Zj1HZW5kZXIlM0FtZW4lMkNtZW4lMjB3b21lbiUyQ3dvbWVuJnV0bV9zb3VyY2U9Y3JtX2NybV9wZXJzb25hbGl6ZWRfbWFya2V0aW5nJnV0bV9tZWRpdW09bWFpbGVyJnV0bV9jYW1wYWlnbj1udGNfaW5kZXBlbmRlbmNlX2RheV9ncmVldGluZ3NfYmFubmVyMTBfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy>
+
+ <http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8CRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlUTCgc=&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjExX2J1eWVyc19mdWxsXzE1YXVnMjAyMg==>
+
+ If you would prefer not receiving our emails, please click here
+<http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMDA1QHRQ==&sl=cUttH2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NMEwweH19MXRJDWAQUSARAEEhdTwpFQQBcAg0IXEYXFlZdWUtfSgxDEVhXF0xdQloOXhVfEhs=&ext=cD1zbXVuc3ViJm1pZD0zNTc3JnVpZD1bVU5JUUlEXQ==>
+ to unsubscribe. 
+
+ If you would like to experience the best of online
+shopping for men, women and kids in India, you are at theright place.
+Myntra is the ultimate destination for fashion and lifestyle, being
+host to a wide array of merchandise including
+clothing,footwear,accessories, jewellery, personal care products and
+more. It is time to redefine your style
+statement with our treasure-trove of trendy items. Our online store
+brings you the latest in designer products straight out of fashion
+houses. You can shop online at Myntra from the comfort of your home
+and get your favourites delivered right to your doorsteps.
+
+
+--b1_21d9126a096b9bc0a873aab87cce782e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html><html><head> <style type="text/css"></style> <meta content="text/html; charset=utf-8" http-equiv="Content-type"> <meta content="width = 375, initial-scale = -1" name="viewport"> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <meta content="date=no" name="format-detection"> <meta content="address=no" name="format-detection"> <meta content="telephone=no" name="format-detection"> <meta name="x-apple-disable-message-reformatting"> <link href="https://fonts.googleapis.com/css?family=Gothic+A1:400,700" rel="stylesheet"> <title>Email Template</title> <style media="screen"
+type="text/css"> body { padding: 0 !important; margin: 0 !important; display: block !important; min-width: 100% !important; width: 100% !important; background: #ffffff; -webkit-text-size-adjust: none } a { color: #1936e7; text-decoration: none } .text-button.t-white a { color: #fefffe; text-decoration: none } .text-button.t-orange a { color: #ff7f02; text-decoration: none } .text-button.t-dark a { color: #000001; text-decoration: none } .text-button.t-blue a { color: #1936e7; text-decoration: none } .footer-text a { color: #999b9f; text-decoration: none } .t-orange a { color: #ff7f02 }
+ .t-bluea { color: #1936e7 } .t-dark a { color: #000001 } .t-white a { color: #fefffe } p { padding: 0 !important; margin: 0 !important } img { -ms-interpolation-mode: bicubic } .mcnPreviewText { display: none !important } @media only screen and (max-device-width: 600px), only screen and (max-width: 600px) { u+.body .gwfw { width: 100% !important; width: 100vw !important } .m-shell { width: 100% !important; min-width: 100% !important } .m-center { text-align: center !important } .center { margin: 0 auto !important } .td { width: 100% !important; min-width: 100% !important } .m-br-15 { height:
+15px!important } .m-td, .m-hide { display: none !important; width: 0 !important; height: 0 !important; font-size: 0 !important; line-height: 0 !important; min-height: 0 !important } .m-block { display: block !important } .fluid-img img { width: 100% !important; max-width: 100% !important; height: auto !important } .column { float: left !important; width: 100% !important; display: block !important } .content-spacing { width: 15px !important } } </style></head><body class="body" style="background: #f5f5f6; -webkit-text-size-adjust: none; padding: 0 !important; margin: 0 !important; display:
+block !important; min-width: 100% !important; width: 100% !important;"> <table bgcolor="#f5f5f6" border="0" cellpadding="0" cellspacing="0" class="gwfw" width="100%"> <tbody> <tr> <td align="center" valign="top"> <table border="0" cellpadding="0" cellspacing="0" class="m-shell"> <tr> <td align="center"> <table width="100%" border="0" style="max-width:540px; background:#ffffff;"> <tr> <td bgcolor="#ffffff"> <table width="98%" border="0" cellspacing="0" cellpadding="0" align="center" style="max-width:100%; background:#ffffff;"> <tr> <td align="center" style="border-bottom:5px solid #ffffff;
+font-family:Helvetica, Arial, sans-serif; color:#111111; font-size:12px;"> <center>Click to celebrate in style!</center> </td> </tr> <tr> <td class="fluid-img"> <a href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4CRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjFfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/0_9616d231-e28c-4430-93d5-f28e4e8daa0f1660293663042-Independence-day-greetings---deals-of-the-day_01.gif" style="-ms-interpolation-mode: bicubic; display:
+block; border: none;" width="100%"> </a> <a href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4FRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjJfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/1_424b4407-7896-43c6-9054-db4df9d88c301660293663051-Independence-day-greetings---deals-of-the-day_02.gif" style="-ms-interpolation-mode: bicubic; display:
+block; border: none;" width="100%"> </a> <a
+href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4ERQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjNfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/2_027d5216-697d-4dfe-829d-c797877c2d3e1660293663058-Independence-day-greetings---deals-of-the-day_03.gif" style="-ms-interpolation-mode: bicubic; display:
+block; border: none;" width="100%"> </a> <a
+href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4HRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFg==&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjRfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/3_32e58c4d-5018-483b-8a55-e5bb1703ee4f1660293663065-Independence-day-greetings---deals-of-the-day_04.gif" style="-ms-interpolation-mode: bicubic; display:
+block; border: none;" width="100%"> </a> </td> </tr> <tr> <td align="center"> <table width="100%" border="0" cellspacing="0" align="center" cellpadding="0"> <tbody>
+<tr> <td width="30%" class="fluid-img" bgcolor="#eaeaea" align="center" height="40px"> <a href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4GRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlkdVkFAVUlUUhFfClZbT0ZMX0sE&ext=c29ydD1uZXcmdXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI1X2J1eWVyc19mdWxsXzE1YXVnMjAyMg=="  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/4_88d50dfe-4981-407e-bea0-05d78dd5381f1658837895414-arrival_01.jpg" style="border:0; display:block; outline:none;"
+width="100%"> </a> </td> <td width="40%" class="fluid-img" bgcolor="#eaeaea"
+align="center" height="40px"> <a href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4JRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlwLVVAfUhFAXQtEC1BbBRhVVVcU&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI2X2J1eWVyc19mdWxsXzE1YXVnMjAyMg=="  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/5_de8116e6-19c6-4995-8557-35b305cc9f691658837895433-home_02.jpg" style="border:0; display:block; outline:none;" width="100%">
+</a> </td> <td width="30%" class="fluid-img" bgcolor="#eaeaea" align="center" height="40px"> <a
+href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl4IRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFkQBSkZdWgVeHgFWEVw=&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI3X2J1eWVyc19mdWxsXzE1YXVnMjAyMg=="  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/6_3e0acb30-bbeb-4677-bab1-a3cfd52fb1951658837895420-beauty_03.jpg" style="border:0; display:block; outline:none;" width="100%"> </a>
+</td> </tr> <tr> <td width="30%" class="fluid-img" bgcolor="#eaeaea" align="center" height="40px"> <a
+href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8BRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlUHW1BBRwtAWgdE&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI4X2J1eWVyc19mdWxsXzE1YXVnMjAyMg=="  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/7_fdd2714c-3797-4f99-8a34-a564f370834f1658837895408-accessories_04.jpg" style="border:0; display:block; outline:none;" width="100%"> </a>
+</td> <td width="40%" class="fluid-img" bgcolor="#eaeaea" align="center" height="40px"> <a
+href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8ARQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlILV0FFUQVA&ext=dXRtX3NvdXJjZT1jcm1fY3JtX3BlcnNvbmFsaXplZF9tYXJrZXRpbmcmdXRtX21lZGl1bT1tYWlsZXImdXRtX2NhbXBhaWduPW50Y19pbmRlcGVuZGVuY2VfZGF5X2dyZWV0aW5nc19iYW5uZXI5X2J1eWVyc19mdWxsXzE1YXVnMjAyMg=="  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/8_5785c380-1e0d-406c-96f2-c375ceba96861658837895427-footwear_05.jpg" style="border:0; display:block; outline:none;" width="100%"> </a> </td>
+<td width="30%" class="fluid-img" bgcolor="#eaeaea" align="center" height="40px"> <a
+href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8DRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFkQITUYfRw1IVg==&ext=Zj1HZW5kZXIlM0FtZW4lMkNtZW4lMjB3b21lbiUyQ3dvbWVuJnV0bV9zb3VyY2U9Y3JtX2NybV9wZXJzb25hbGl6ZWRfbWFya2V0aW5nJnV0bV9tZWRpdW09bWFpbGVyJnV0bV9jYW1wYWlnbj1udGNfaW5kZXBlbmRlbmNlX2RheV9ncmVldGluZ3NfYmFubmVyMTBfYnV5ZXJzX2Z1bGxfMTVhdWcyMDIy"  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/9_1f8ae84e-7776-4f71-8824-1fe91cf22f181658837895440-size_06.jpg" style="border:0;
+display:block; outline:none;" width="100%"> </a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td class="fluid-img" style="font-size:0pt; line-height:0pt; text-align:left; padding-bottom:
+20px;"> <a href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMACl8CRQ==&sl=cUt7H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NME0ULHx1CRBEfVB8PRRNTTQVfW0tcUghdBhYXFlUTCgc=&ext=dXRtX3NvdXJjZT1jcm1fcGVyc29uYWxpemVkX21hcmtldGluZyZ1dG1fbWVkaXVtPW1haWxlciZ1dG1fY2FtcGFpZ249bnRjX2luZGVwZW5kZW5jZV9kYXlfZ3JlZXRpbmdzX2Jhbm5lcjExX2J1eWVyc19mdWxsXzE1YXVnMjAyMg=="  target="_blank"> <img src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/10_e9cec1fb-0a96-42b7-a43d-ceecb45bac841659945556936-new-season-strip_02.gif" style="-ms-interpolation-mode: bicubic; display: block; border: none;"
+width="100%"> </a> <img border="0"
+src="https://newtwb.s3.us-east-1.amazonaws.com/images/myntrabuyercomsmt/templates/1205/11_fc177c3f-f67a-4d71-a5aa-41c8a599c5bc1659954720414-__09.jpg" style="-ms-interpolation-mode: bicubic;" width="100%"> </td> </tr> <tr> <td class="footer-text" style="color:#999b9f; font-family:Verdana; font-size:12px; line-height:25px; text-align:center; min-width:auto !important;"> If you would prefer not receiving our emails, please <a class="link-dark-blue" href="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAMDA1QHRQ==&sl=cUttH2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&pp=0&&fl=W0NMEwweH19MXRJDWAQUSARAEEhdTwpFQQBcAg0IXEYXFlZdWUtfSgxDEVhXF0xdQloOXhVfEhs=&ext=cD1zbXVuc3ViJm1pZD0zNTc3JnVpZD1bVU5JUUlEXQ=="  style="color: #1936e7; text-decoration: none;" target="_blank"><span class="link-dark-blue" style="color:#1936e7;
+text-decoration:none;">click here </span></a> to unsubscribe. </td> </tr> </table> </td> </tr> </table> </td> </tr> </table> </td> </tr> </tbody> </table><br/><div></div><img border="0" src="http://myntrabuyers.myntramailers.com/vtrack?clientid=96861&ul=
+BwUPVQAHBQFJAhpCUBQFXg9TDwJWRAVfUARCAAtUCAEkX1hTXQgcUA1aH0U=&ml=AAIPVEoBTAJJ&sl=cUt3H2NiTGF4ZxpcQAgVQwBQFh9VRBcfXhhfFxYFVFUNVFBAR0pRXA9LUw==&c=96861" ></body></html><p> <span style="color:#ffffff;"><span style="font-size:0px;">If you would like to experience the best of online shopping for men, women and kids in India, you are at theright place. Myntra is the ultimate destination for fashion and lifestyle, being host to a wide array of merchandise including clothing,footwear,accessories, jewellery, personal care products and more. It is time to redefine your style
+statement with our treasure-trove of trendy items. Our online store brings you the latest in designer products straight out of fashion houses. You can shop online at Myntra from the comfort of your home and get your favourites delivered right to your doorsteps. </span></span></p>
+
+
+
+--b1_21d9126a096b9bc0a873aab87cce782e--
+

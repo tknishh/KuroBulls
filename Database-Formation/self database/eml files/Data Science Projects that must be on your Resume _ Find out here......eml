@@ -1,0 +1,421 @@
+Delivered-To: sirdonaldfrancesco015@gmail.com
+Received: by 2002:a05:6359:4287:b0:b3:862c:9b88 with SMTP id kp7csp197764rwb;
+        Sat, 20 Aug 2022 00:47:46 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR7u84+duAZxcm1x9wv+LVtU4Re5SGRSiHIS8VBqL0eWIkI/c9V5RdLJgxdz9fQ7Mn5K1A9I
+X-Received: by 2002:a05:600c:4ed0:b0:3a6:de8:5e7d with SMTP id g16-20020a05600c4ed000b003a60de85e7dmr9811983wmq.181.1660981666508;
+        Sat, 20 Aug 2022 00:47:46 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1660981666; cv=none;
+        d=google.com; s=arc-20160816;
+        b=YrFOSK4bQlCG0QngsazVJ5bdX3nv8C8zZ3uvMQV/ZQ6RjvXboItVQBQrEF4dM7wdV2
+         n47rvsir836DcEFEp0XBgGQVJAHx2q/RW1eTTP2fBzA6owf+J5PyNwfHTVDGSyEpOKqm
+         BZb7DF4YWrKSME7JvHqLk9K/IPXDHcbBH/ryjPpYKGKu/RSde4RY82crnIVLFJs336Zq
+         PQQ5K6xpTv3C3IxSJIrCeUVhAclIo7kBbYikpn3ueNUwpH9ZpAPhPDV5keku8lvzdgFD
+         ZUy5qXvxNrsASv3d5wAGaLebOEUu1mbLhJBi6+kIu8bjW1sKwJl9rn5FC0wYj+rVcKK2
+         Vzew==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=reply-to:precedence:message-id:mime-version:list-unsubscribe-post
+         :list-unsubscribe:list-id:from:feedback-id:date:subject:to
+         :dkim-signature:dkim-signature;
+        bh=zN5jzSljGXNj68JrH44q5i1I1VNqs9zc+YlJs44JsMk=;
+        b=L3z8hIFpNmKecXJoXEAAgZCOdHv3iUMO1m51ENCoOc8R2jTWDYw7vGcbguHZbK0xcJ
+         AU5r7OvnySTtZuXJrYE/gGF77FzPeTpbWoCOEzRnGmtukVT+UBKjnCpgfFiYjt731C9R
+         v1YVCeAZUtJIYpo0ptXs7nJAR0/vlnDX0HZpXkixwXttL4cOSW+KI4QIMg/XfRZd8Vv4
+         JWiakt5n0I4dC/zjaTG4o2zvDC0TOurL2E1oAgA2s+2qzNNPbHC3vfsop2Z03Fy5UrLQ
+         ntpR75zY+vNK7+R8c/ps28Aw1P2oyN5pB/0jEW1hhqsSOMfONLv+7TlwCfAIWyfZCvxt
+         clQA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@newsletters.analyticsvidhya.com header.s=mail header.b=ZuqKOPzx;
+       dkim=pass header.i=@sendib.com header.s=mail header.b=gCdIh4kA;
+       spf=pass (google.com: domain of noreply@newsletters.analyticsvidhya.com designates 153.92.236.44 as permitted sender) smtp.mailfrom=noreply@newsletters.analyticsvidhya.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=analyticsvidhya.com
+Return-Path: <noreply@newsletters.analyticsvidhya.com>
+Received: from newsletters.analyticsvidhya.com ([153.92.236.44])
+        by mx.google.com with ESMTPS id l20-20020a05600c4f1400b003a2e25b063fsi3548394wmq.25.2022.08.20.00.47.46
+        for <sirdonaldfrancesco015@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 20 Aug 2022 00:47:46 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@newsletters.analyticsvidhya.com designates 153.92.236.44 as permitted sender) client-ip=153.92.236.44;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@newsletters.analyticsvidhya.com header.s=mail header.b=ZuqKOPzx;
+       dkim=pass header.i=@sendib.com header.s=mail header.b=gCdIh4kA;
+       spf=pass (google.com: domain of noreply@newsletters.analyticsvidhya.com designates 153.92.236.44 as permitted sender) smtp.mailfrom=noreply@newsletters.analyticsvidhya.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=analyticsvidhya.com
+DKIM-Signature: a=rsa-sha256; bh=zN5jzSljGXNj68JrH44q5i1I1VNqs9zc+YlJs44JsMk=;
+ c=relaxed/relaxed; d=newsletters.analyticsvidhya.com;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id;
+ q=dns/txt; s=mail; t=1660981584; v=1;
+ b=ZuqKOPzxE1QbXraIjv8c+WhfdNe8eHVb3s5qrXlMo8wf/2Gu7UyCzxxjBItOgXATvAhLFKOq
+ NN9zrE1ogjRUT1PLFWoSMTlWeFWKJZepVEscL4Jn6MnZkw0lJwVOwrMW8V1gvy7gfpF5VXhK4UJ
+ /Umyaw3RAR5PaVGeUtIsHQU8=
+DKIM-Signature: a=rsa-sha256; bh=zN5jzSljGXNj68JrH44q5i1I1VNqs9zc+YlJs44JsMk=;
+ c=relaxed/relaxed; d=sendib.com;
+ h=to:cc:from:reply-to:subject:date:mime-version:content-type:list-id:list-unsubscribe:x-csa-complaints:list-unsubscribe-post:message-id:sender:x-sib-id:x-mailin-client:x-mailin-campaign:feedback-id;
+ q=dns/txt; s=mail; t=1660981584; v=1;
+ b=gCdIh4kAoHJNjSXf77IMIA0DUZdS4khz07pS2c2jjUoI4PxBUXzuVsZrbTIowC66bllMpoVo
+ oO2ygyHhpmmWGKlDo+e8eItHosMuWW41J0OuiWFQ2E/xzpWIaSoY2yOF/n8xlNbQtr7QfS7bRDW
+ fErg5lgHN+g3hONcwUeDE+F0=
+To: <sirdonaldfrancesco015@gmail.com>
+Subject: Data Science Projects that must be on your Resume | Find out here.....
+Content-Type: multipart/alternative; boundary="-------?=_49129-9489642943509"
+Date: Sat, 20 Aug 2022 07:46:24 +0000
+Feedback-ID: 153.92.236.44:1034039_6321:1034039:Sendinblue
+From: Analytics Vidhya <connect@analyticsvidhya.com>
+List-Id: MTAzNDAzOS0yMDU2NTUyNy0yMzEw <MTAzNDAzOS0yMDU2NTUyNy0yMzEw.list-id.newsletters.analyticsvidhya.com>
+List-Unsubscribe: <mailto:unsubscribe@newsletters.analyticsvidhya.com?subject=unsub-fn7kik2rgpolxh3j&body=fn7kik2rgpolxh3j>,<https://list-unsubscribe.me/mk/un/li/jLF7bfbDNjw1N4MoKmsz-CiwyRM3wlpWyF_nHr1E5gNMXKsOWp7n7cq0Ca8XWxu7-BaDDLb30pbPWNEDu1P8HNX4O2kaUHxVnEIyMDKlDASXiLpxylO3Fsd9t_6zc_dNd7fMUfmTGlPViF5qhhh9S0omLEm7QllS22eTtN3LY9f6AvONyfryTjCp>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Message-Id: <202220080746.fn7kik2rgpolxh3j@newsletters.analyticsvidhya.com>
+Precedence: bulk
+Reply-To: liza@analyticsvidhya.com
+X-Csa-Complaints: csa-complaints@eco.de
+X-Mailer: Sendinblue
+X-Mailin-Campaign: 6321
+X-Mailin-Client: 1034039
+X-sib-id: T5QwQHgQ7e7c7LAQrHKKnag5B3Bs6SOlxmvu-xCJy9IQSdvtWKQlcvvkgTJ-GX1sfys6WMAOtQhWI0dbZMALZR0aVE2Ol4gjPmCC-C8HKMJjS9dRpuFX592vC-9D6OGHe2s0sc83iE6hgyumZKx5Yt8Z1zKy8oiFEqGT43V8ACNKLzajSdz_3A0tjS42tcH4xcDP2SrQ8qQYRkdbfCVhSyuF3xX3IyzxbGmhDCsI9xwV5XGmlq7u
+
+---------?=_49129-9489642943509
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+
+#
+
+[Analytics Vidhya]
+
+#
+
+"This course not only taught me how to step into the vast field of data sci=
+ence but also helped me develop an aptitude for it!" Samarth Saxena
+
+#
+
+Dear AI Aspirant
+
+Have you ever wondered how Ola or Uber are able to predict the time the cab=
+ will take to reach the destination? The most conventional and widespread i=
+dea is to build a model to predict the trip time that a cab would take to r=
+each the destination.
+
+Applying Machine Learning techniques for solving these complex business pro=
+blems will give you the required exposure to this domain. In this problem, =
+we will build an ML model for predicting the ride duration of taxi trips in=
+ New York City project
+
+This was just a glimpse of the machine learning module from the [Certified]=
+(http://blackbelt.analyticsvidhya.com/plus?utm_source=3Dsendinblue&utm_camp=
+aign=3DAI  ML BlackBelt  Awareness  May sign-ups  07062022&utm_medium=3Dema=
+il) [AI & ML BlackBelt Plus Program](https://blackbelt.analyticsvidhya.com/=
+plus?utm_source=3Dsendinblue&utm_campaign=3DAI  ML BlackBelt  Awareness  Ma=
+y sign-ups  07062022&utm_medium=3Demail) shown by the project Trip Duration=
+ prediction problem. Our exploration starts with the trip duration values.
+
+Why, don't you go ahead and download all projects which are a part of this =
+unique program which comes with 1:1 Mentorship?
+
+#
+
+[Download All 50+ Projects](https://blackbelt.analyticsvidhya.com/plus?utm_=
+source=3Dsendinblue&utm_campaign=3DAI  ML BlackBelt  Awareness  May sign-up=
+s  07062022&utm_medium=3Demail#ReinforceProject)
+
+#
+
+As always if you need anything, please reply back directly to this email.
+
+All the Best!
+Team Analytics Vidhya
+
+#
+
+=C2=A9 2022 Analytics Vidhya
+
+
+---------?=_49129-9489642943509
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head><meta http-equiv=3D"X-UA-Compatibl=
+e" content=3D"IE=3Dedge"/><meta name=3D"viewport" content=3D"width=3Ddevice=
+-width, initial-scale=3D1"/><meta http-equiv=3D"Content-Type" content=3D"te=
+xt/html; charset=3Dutf-8"/><meta name=3D"x-apple-disable-message-reformatti=
+ng"/><meta name=3D"apple-mobile-web-app-capable" content=3D"yes"/><meta nam=
+e=3D"apple-mobile-web-app-status-bar-style" content=3D"black"/><meta name=
+=3D"format-detection" content=3D"telephone=3Dno"/><title>Data Science Proje=
+cts that must be on your Resume | Find out here.....</title><link href=3D"h=
+ttps://fonts.google.com/specimen/Roboto" rel=3D"stylesheet" type=3D"text/cs=
+s"/><style type=3D"text/css">.ReadMsgBody{width:100%;background-color:#ebeb=
+eb}.ExternalClass{width:100%;background-color:#ebebeb}.ExternalClass, .Exte=
+rnalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .=
+ExternalClass div{line-height:100%}a[x-apple-data-detectors]{color:inherit =
+!important;text-decoration:none !important;font-size:inherit !important;fon=
+t-family:inherit !important;font-weight:inherit !important;line-height:inhe=
+rit !important;}body{-webkit-text-size-adjust:none;-ms-text-size-adjust:non=
+e}body{margin:0;padding:0}.yshortcuts a{border-bottom:none !important}.rnb-=
+del-min-width{min-width:0 !important;}.templateContainer{max-width:590px !i=
+mportant;width:auto !important;}img[class=3D"rnb-col-3-img"]{max-width:170p=
+x;}img[class=3D"rnb-col-2-img"]{max-width:264px;}img[class=3D"rnb-col-2-img=
+-side-xs"]{max-width:180px;}img[class=3D"rnb-col-2-img-side-xl"]{max-width:=
+350px;}img[class=3D"rnb-col-1-img"]{max-width:550px;}img[class=3D"rnb-heade=
+r-img"]{max-width:590px;}.rnb-force-col p, ul, ol{margin:0px!important}.rnb=
+-del-min-width p, ul, ol{margin:0px!important}.rnb-tmpl-width{width:100%!im=
+portant}.rnb-social-width{padding-right:15px!important}.rnb-social-align{fl=
+oat:right!important}li{mso-margin-top-alt:0;mso-margin-bottom-alt:0}table{m=
+so-table-lspace:0pt;mso-table-rspace:0pt}table, tr, td{border-collapse:coll=
+apse}p,a,li,blockquote{mso-line-height-rule:exactly}.msib-right-img{mso-pad=
+ding-alt:0 !important}@media only screen and (min-width:590px){.templateCon=
+tainer{width:590px !important}}@media screen and (max-width:360px){.rnb-yah=
+oo-width{width:360px !important}}@media screen and (max-width:380px){.eleme=
+nt-img-text{font-size:24px !important}.element-img-text2{width:230px !impor=
+tant}.content-img-text-tmpl-6{font-size:24px !important}.content-img-text2-=
+tmpl-6{width:220px !important}}@media screen and (max-width:480px){td[class=
+=3D"rnb-container-padding"]{padding-left:10px !important;padding-right:10px=
+ !important;}td.rnb-force-nav{display:inherit;}.rnb-social-text-left{width:=
+100%;text-align:center;margin-bottom:15px;}.rnb-social-text-right{width:100=
+%;text-align:center;}}@media only screen and (max-width:600px){.rnb-text-ce=
+nter{text-align:center !important}th.rnb-force-col{display:block;padding-ri=
+ght:0 !important;padding-left:0 !important;width:100%;}table.rnb-container{=
+width:100% !important;}table.rnb-btn-col-content{width:100% !important;}tab=
+le.rnb-col-3{float:none !important;width:100% !important;margin-bottom:10px=
+;padding-bottom:10px;}table.rnb-last-col-3{float:none !important;width:100%=
+ !important;}table.rnb-col-2{float:none !important;width:100% !important;ma=
+rgin-bottom:10px;padding-bottom:10px;}table.rnb-col-2-noborder-onright{floa=
+t:none !important;width:100% !important;margin-bottom:10px;padding-bottom:1=
+0px;}table.rnb-col-2-noborder-onleft{float:none !important;width:100% !impo=
+rtant;margin-top:10px;padding-top:10px;}table.rnb-last-col-2{float:none !im=
+portant;width:100% !important;}table.rnb-col-1{float:none !important;width:=
+100% !important;}img.rnb-col-3-img{width:100% !important;}img.rnb-col-2-img=
+{width:100% !important;}img.rnb-col-2-img-side-xs{width:100% !important;}im=
+g.rnb-col-2-img-side-xl{width:100% !important;}img.rnb-col-1-img{width:100%=
+ !important;}img.rnb-header-img{width:100% !important;margin:0 auto;}img.rn=
+b-logo-img{width:100% !important;}td.rnb-mbl-float-none{float:inherit !impo=
+rtant;}.img-block-center{text-align:center !important}.logo-img-center{floa=
+t:inherit !important;}.rnb-social-align{margin:0 auto !important;float:inhe=
+rit !important}.rnb-social-center{display:inline-block}.social-text-spacing=
+{margin-bottom:0px !important;padding-bottom:0px !important}.social-text-sp=
+acing2{padding-top:15px !important}ul{mso-special-format:bullet}}@media scr=
+een{body{font-family:'Roboto','Arial',Helvetica,sans-serif}}</style><!--[if=
+ gte mso 11]><style type=3D"text/css">table{border-spacing: 0; }table td {b=
+order-collapse: separate;}</style><![endif]--><!--[if !mso]><!--><style typ=
+e=3D"text/css">table{border-spacing:0}table td{border-collapse:collapse}</s=
+tyle> <!--<![endif]--><!--[if gte mso 15]><xml><o:OfficeDocumentSettings><o=
+:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings>=
+</xml><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:Allo=
+wPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml=
+><![endif]--></head><body> <table border=3D"0" align=3D"center" width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" class=3D"main-template" bgcolor=3D"=
+#ffffff" style=3D"background-color:#ffffff"> <tbody><tr> <td align=3D"cente=
+r" valign=3D"top"> <!--[if gte mso 9]> <table align=3D"center" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" width=3D"590" style=3D"width:590px;"> =
+<tr> <td align=3D"center" valign=3D"top" width=3D"590" style=3D"width:590px=
+;"> <![endif]--> <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wi=
+dth=3D"590" class=3D"templateContainer" style=3D"max-width:590px!important;=
+width:590px"> <tbody><tr> <td align=3D"center" valign=3D"top"> <div style=
+=3D"background-color:#ffffff;border-radius:0px"> <!--[if mso]> <table align=
+=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%"=
+ style=3D"width:100%;"> <tr> <![endif]--> <!--[if mso]> <td valign=3D"top" =
+width=3D"590" style=3D"width:590px;"> <![endif]--> <table class=3D"rnb-del-=
+min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" =
+style=3D"min-width:590px" name=3D"Layout_165" id=3D"Layout_165"> <tbody><tr=
+> <td class=3D"rnb-del-min-width" align=3D"center" valign=3D"top" style=3D"=
+min-width:590px"> <a href=3D"#" name=3D"Layout_165"></a> <table width=3D"10=
+0%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-container=
+" bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;border-radius:0px;p=
+adding-left:20px;padding-right:20px;border-collapse:separate"> <tbody><tr> =
+<td height=3D"10" style=3D"font-size:1px;line-height:10px;mso-hide:all">=C2=
+=A0</td> </tr> <tr> <td valign=3D"top" class=3D"rnb-container-padding" alig=
+n=3D"left"> <table width=3D"100%" cellpadding=3D"0" border=3D"0" align=3D"c=
+enter" cellspacing=3D"0"> <tbody><tr> <td valign=3D"top" align=3D"center"> =
+<table cellpadding=3D"0" border=3D"0" align=3D"center" cellspacing=3D"0" cl=
+ass=3D"logo-img-center"> <tbody><tr> <td valign=3D"middle" align=3D"center"=
+ style=3D"line-height:1px"> <div style=3D"border-top:0px None #000;border-r=
+ight:0px None #000;border-bottom:0px None #000;border-left:0px None #000;di=
+splay:inline-block" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><div><=
+img width=3D"172" vspace=3D"0" hspace=3D"0" border=3D"0" alt=3D"Analytics V=
+idhya" style=3D"float:left;max-width:172px;display:block" class=3D"rnb-logo=
+-img" src=3D"http://r.newsletters.analyticsvidhya.com/im/1034039/e3f9000691=
+6f96537aa0e90bd11ebb368841fe96ba01d2afec5b6ff27dccdf0c.png?e=3D3A2aqJnnU2T6=
+VCNVWrzifTwHayHws8-rK9yy5Mj77U8eNMBJ__iSaCHHNAvfVYCqbs7NV9ZZ9i5q5Kga9oBALbR=
+8SnFpEKWuYdos27jXSTwNW81F8iEg_n1PQtqs1EaUFvbA2TYp3iDD28K6jx8Qp_02NWd9y3-zhx=
+QPpPmuQTekJ8748lqpS5MqmRJIErt5cG6LGuCPQnsez0BmwDHU7rbIuRUDICuj78owDjXG8RPWf=
+Tw" sib_img_id=3D"0"/></div></div></td> </tr> </tbody></table> </td> </tr> =
+</tbody></table></td> </tr> <tr> <td height=3D"10" style=3D"font-size:1px;l=
+ine-height:10px;mso-hide:all">=C2=A0</td> </tr> </tbody></table> </td> </tr=
+> </tbody></table> <!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </t=
+able> <![endif]--> </div></td> </tr><tr> <td align=3D"center" valign=3D"top=
+"> <div style=3D"background-color:#ffffff;border-radius:0px"> <!--[if mso]>=
+ <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" w=
+idth=3D"100%" style=3D"width:100%;"> <tr> <![endif]--> <!--[if mso]> <td va=
+lign=3D"top" width=3D"590" style=3D"width:590px;"> <![endif]--> <table widt=
+h=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" name=3D"Layout_=
+154" id=3D"Layout_154"><tbody><tr> <td align=3D"center" valign=3D"top"><a h=
+ref=3D"#" name=3D"Layout_154"></a> <table border=3D"0" width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" =
+style=3D"height:0px;background-color:#ffffff;border-radius:0px;border-colla=
+pse:separate;padding:5px 20px"><tbody><tr> <td class=3D"rnb-container-paddi=
+ng" style=3D"font-size:px;font-family:;color:"> <table border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container" align=3D"cente=
+r" style=3D"margin:auto"> <tbody><tr> <th class=3D"rnb-force-col" align=3D"=
+center" style=3D"text-align:center;font-weight:normal"> <table border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"rnb-col-1"> =
+<tbody><tr> <td height=3D"10"></td> </tr> <tr> <td style=3D"font-family:Ari=
+al,Helvetica,sans-serif;color:#3c4858;text-align:center"> <span style=3D"co=
+lor:#3c4858"><div style=3D"line-height:24px"><em><strong><span style=3D"col=
+or:#f15d22">&#34;This course not only taught me how to step into the vast f=
+ield of data science but also helped me develop an aptitude for it!&#34;=C2=
+=A0</span></strong><span style=3D"color:#f15d22">Samarth Saxena</span></em>=
+</div> </span> </td> </tr> <tr> <td height=3D"10"></td> </tr> </tbody></tab=
+le> </th></tr> </tbody></table></td> </tr> </tbody></table> </td> </tr> </t=
+body></table><!--[if mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> =
+<![endif]--> </div></td> </tr><tr> <td align=3D"center" valign=3D"top"> <di=
+v style=3D"background-color:#ffffff;border-radius:0px"> <!--[if mso]> <tabl=
+e align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=
+=3D"100%" style=3D"width:100%;"> <tr> <![endif]--> <!--[if mso]> <td valign=
+=3D"top" width=3D"590" style=3D"width:590px;"> <![endif]--> <table class=3D=
+"rnb-del-min-width" width=3D"100%" cellpadding=3D"0" border=3D"0" cellspaci=
+ng=3D"0" style=3D"min-width:100%" name=3D"Layout_78"> <tbody><tr> <td class=
+=3D"rnb-del-min-width" align=3D"center" valign=3D"top"> <a href=3D"#" name=
+=3D"Layout_78"></a> <table width=3D"100%" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"rnb-container" bgcolor=3D"#ffffff" style=3D"backgr=
+ound-color:#ffffff;padding-left:20px;padding-right:20px;border-collapse:sep=
+arate;border-radius:0px;border-bottom:0px none #c8c8c8"> <tbody><tr> <td he=
+ight=3D"5" style=3D"font-size:1px;line-height:5px;mso-hide:all">=C2=A0</td>=
+ </tr> <tr> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"lef=
+t"> <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"rnb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col" st=
+yle=3D"text-align:left;font-weight:normal;padding-right:0px" valign=3D"top"=
+> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"100%" align=3D"left" class=3D"rnb-col-1"> <tbody><tr> <td style=3D"f=
+ont-size:14px;font-family:Arial,Helvetica,sans-serif, sans-serif;color:#3c4=
+858"><div style=3D"text-align:center"> <div style=3D"text-align:left"><font=
+ color=3D"#000000">Dear AI Aspirant</font></div> <div style=3D"text-align:l=
+eft"><br/> <span style=3D"color:#000000">Have you ever wondered how <strong=
+>Ola or Uber</strong>=C2=A0are able to predict the time the cab will take t=
+o reach the destination? The most conventional and widespread idea is to <s=
+trong>build a model to predict the trip time that a cab would take to reach=
+ the destination.=C2=A0</strong><br/> <br/> <strong>Applying Machine Learni=
+ng techniques</strong> for solving these complex business problems will giv=
+e you the required exposure to this domain. In this problem, we will <stron=
+g>build an ML model for predicting the ride duration of taxi trips in New Y=
+ork City project</strong></span></div> <div style=3D"text-align:left"> <div=
+><br/> <span style=3D"color:#000000">This was just a glimpse of the machine=
+ learning module from the <a href=3D"http://r.newsletters.analyticsvidhya.c=
+om/mk/cl/f/EjfcAhhabzRuxalqCk4-rxVWdnTp7hTuaPtf71TPhXhzPR2-4RU7zPmGPaW_XTTb=
+X8D9OZiy284Zib4e8pRIIMECEVj3ze2OKX4rHSTW8TuTRZVPwc-YmmAakDWdGD_o_SvYaY0qHqj=
+esJ1y1Aspekvz14LOskYeYClOJbPfdA9-3jrsPaiON6R-D5ugC7gYCsA0m93eJDLnbD2VnPqh2A=
+viRp_XuS7e5Di48iZkvDqiUuBdDaNjRNtZAxeqa_fdYipEAvXuA6ktLHZmAKPSFcTLhSiVXDnTv=
+kNpstAvruufLnZYwJUC10to01_-GxEl0dif7X9xcEOfDTsC_q7SNOnwEVqoW30RHMwFedW4T3u8=
+MHT_zsbN_mm26stM5Q" style=3D"text-decoration:underline;color:#3499db" sib_l=
+ink_id=3D"0"><strong>Certified</strong></a>=C2=A0<a href=3D"http://r.newsle=
+tters.analyticsvidhya.com/mk/cl/f/w3dDo7VvVlr3O0-AD3AvLeXmHFEQXSZKghJfV8Ji1=
+Nkm-_Zh3yU0_2YFwYfbz2asoUyRU83WqV7UjSQHjm7ih5AiVGhwuXfs6f64vZtvkIvefKQ6JyMW=
+pLY7_ZORdz0GETKNFJFoZxulqhCmKgJZU7qHKnYl69FZWl_wlt_gmJuANoGOc4dIyTaZ9WHL537=
+5Nl7JwsK8vM-WDcQut4UxIQJjjtRg2sAXscYZbGAQ21AK8KpHlIDSB1cJEZetW1UAa82tUgRJKM=
+-ENmzBXOpnn-orRkjdNE9YJG-bm-a0Ia1FUVrJS0pTbSvjABKfClhLe5bHRhDgxYgQ5FZXUtSvw=
+cXkIfGy8dllByD4p760f4uU__4558Hv5kbsqZqCJuM" style=3D"text-decoration:underl=
+ine;color:#3499db" sib_link_id=3D"1"><strong>AI &amp; ML BlackBelt Plus Pro=
+gram</strong></a> shown by the project Trip Duration prediction problem. Ou=
+r exploration starts with the trip duration values.</span><br/> =C2=A0</div=
+> <div><span style=3D"color:#000000"><span style=3D"background-color:transp=
+arent">Why, don&#39;t you go ahead and download all projects which are a pa=
+rt of this unique program which comes with 1:1 Mentorship?</span></span></d=
+iv> </div> </div> <div style=3D"text-align:justify"> <div> <ul> </ul> </div=
+> </div> </td> </tr> </tbody></table> </th></tr> </tbody></table></td> </tr=
+> <tr> <td height=3D"10" style=3D"font-size:1px;line-height:10px;mso-hide:a=
+ll">=C2=A0</td> </tr> </tbody></table> </td> </tr> </tbody></table><!--[if =
+mso]> </td> <![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </div></=
+td> </tr><tr> <td align=3D"center" valign=3D"top"> <div style=3D"background=
+-color:#ffffff;border-radius:0px"> <!--[if mso]> <table align=3D"center" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"widt=
+h:100%;"> <tr> <![endif]--> <!--[if mso]> <td valign=3D"top" width=3D"590" =
+style=3D"width:590px;"> <![endif]--> <table class=3D"rnb-del-min-width" wid=
+th=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-w=
+idth:590px" name=3D"Layout_167" id=3D"Layout_167"> <tbody><tr> <td class=3D=
+"rnb-del-min-width" align=3D"center" valign=3D"top" style=3D"min-width:590p=
+x"> <a href=3D"#" name=3D"Layout_167"></a> <table width=3D"100%" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mso-button-block rnb-contai=
+ner" style=3D"background-color:#ffffff;border-radius:0px;padding-left:20px;=
+padding-right:20px;border-collapse:separate"> <tbody><tr> <td height=3D"10"=
+ style=3D"font-size:1px;line-height:10px;mso-hide:all">=C2=A0</td> </tr> <t=
+r> <td valign=3D"top" class=3D"rnb-container-padding" align=3D"left"> <tabl=
+e width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"=
+rnb-columns-container"> <tbody><tr> <th class=3D"rnb-force-col" valign=3D"t=
+op"> <table border=3D"0" valign=3D"top" cellspacing=3D"0" cellpadding=3D"0"=
+ width=3D"550" align=3D"center" class=3D"rnb-col-1"> <tbody><tr> <td valign=
+=3D"top"> <table cellpadding=3D"0" border=3D"0" align=3D"center" cellspacin=
+g=3D"0" class=3D"rnb-btn-col-content" style=3D"margin:auto;border-collapse:=
+separate"> <tbody><tr> <td width=3D"auto" valign=3D"middle" bgcolor=3D"#f15=
+d22" align=3D"center" height=3D"40" style=3D"font-size:18px;font-family:Ari=
+al,Helvetica,sans-serif;color:#ffffff;font-weight:normal;padding-left:20px;=
+padding-right:20px;vertical-align:middle;background-color:#f15d22;border-ra=
+dius:4px;border-top:0px None #000;border-right:0px None #000;border-bottom:=
+0px None #000;border-left:0px None #000"> <span style=3D"color:#ffffff;font=
+-weight:normal"> <a style=3D"text-decoration:none;color:#ffffff;font-weight=
+:normal" target=3D"_blank" href=3D"http://r.newsletters.analyticsvidhya.com=
+/mk/cl/f/t09RIh-ZJGzSdzrlfuGicc0ZlAe_USoYQhGZ7qAo_i9EG_mGwIkF3FGE7lFH1WcMN3=
+kBQZKH2dlGp46FaZ_BmDCMFdRBQnbZcPdzM8rICL6cqN9AZP9CIFwzahp6EWVWa7sN4Agv42kkY=
+VvSUOlsFNfwuS3u_EVCWOMqP-Kc8VvB-vppuJtaDmOyvgZvmUcy8cIi3j_RSziI3jjoiU62t-mD=
+vYmrCkVii4oL49I3klzgxuz8633rtycHteEz-zu10tDjH1pzFjsf6PyNAQPCNmfBVeS10Yar1tV=
+aLb2xsfi-uueEUtARgX_QI3sTY3avJx0B4s_e-0ogQPzuFShIthcneHxfJHu0X-K_VPuOBi_C0U=
+23XdEUW8nybUjGXcswNnbddZ5ArV-QN4RMdS0JUpUp" sib_link_id=3D"2"><strong>Downl=
+oad All 50+ Projects</strong></a> </span> </td> </tr></tbody></table> </td>=
+ </tr> </tbody></table> </th> </tr> </tbody></table></td> </tr> <tr> <td he=
+ight=3D"10" style=3D"font-size:1px;line-height:10px;mso-hide:all">=C2=A0</t=
+d> </tr> </tbody></table> </td> </tr> </tbody></table> <!--[if mso]> </td> =
+<![endif]--> <!--[if mso]> </tr> </table> <![endif]--> </div></td> </tr><tr=
+> <td align=3D"center" valign=3D"top"> <div style=3D"background-color:#ffff=
+ff;border-radius:0px"> <!--[if mso]> <table align=3D"center" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"width:100%;"> <t=
+r> <![endif]--> <!--[if mso]> <td valign=3D"top" width=3D"590" style=3D"wid=
+th:590px;"> <![endif]--> <table class=3D"rnb-del-min-width" width=3D"100%" =
+cellpadding=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:100%" n=
+ame=3D"Layout_153"> <tbody><tr> <td class=3D"rnb-del-min-width" align=3D"ce=
+nter" valign=3D"top"> <a href=3D"#" name=3D"Layout_153"></a> <table width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-con=
+tainer" bgcolor=3D"#ffffff" style=3D"background-color:#ffffff;padding-left:=
+20px;padding-right:20px;border-collapse:separate;border-radius:0px;border-b=
+ottom:0px none #c8c8c8"> <tbody><tr> <td height=3D"15" style=3D"font-size:1=
+px;line-height:15px;mso-hide:all">=C2=A0</td> </tr> <tr> <td valign=3D"top"=
+ class=3D"rnb-container-padding" align=3D"left"> <table width=3D"100%" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"rnb-columns-container=
+"> <tbody><tr> <th class=3D"rnb-force-col" style=3D"text-align:left;font-we=
+ight:normal;padding-right:0px" valign=3D"top"> <table border=3D"0" valign=
+=3D"top" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"left" =
+class=3D"rnb-col-1"> <tbody><tr> <td style=3D"font-size:14px;font-family:Ar=
+ial,Helvetica,sans-serif, sans-serif;color:#555"><div><font color=3D"#00000=
+0">As always if you need anything, please reply back directly to this email=
+.</font></div> <div><br/> <font color=3D"#000000">All the Best!</font></div=
+> <div><font color=3D"#000000">Team Analytics Vidhya</font></div> </td> </t=
+r> </tbody></table> </th></tr> </tbody></table></td> </tr> <tr> <td height=
+=3D"15" style=3D"font-size:1px;line-height:15px;mso-hide:all">=C2=A0</td> <=
+/tr> </tbody></table> </td> </tr> </tbody></table><!--[if mso]> </td> <![en=
+dif]--> <!--[if mso]> </tr> </table> <![endif]--> </div></td> </tr><tr> <td=
+ align=3D"center" valign=3D"top"> <div style=3D"background-color:#333333"> =
+<table class=3D"rnb-del-min-width rnb-tmpl-width" width=3D"100%" cellpaddin=
+g=3D"0" border=3D"0" cellspacing=3D"0" style=3D"min-width:590px" name=3D"La=
+yout_4" id=3D"Layout_4"> <tbody><tr> <td class=3D"rnb-del-min-width" align=
+=3D"center" valign=3D"top" style=3D"min-width:590px"> <a href=3D"#" name=3D=
+"Layout_4"></a> <table width=3D"100%" cellpadding=3D"0" border=3D"0" align=
+=3D"center" cellspacing=3D"0" bgcolor=3D"#333" style=3D"padding-right:20px;=
+padding-left:20px;background-color:#333333"> <tbody><tr> <td height=3D"20" =
+style=3D"font-size:1px;line-height:20px;mso-hide:all">=C2=A0</td> </tr> <tr=
+> <td style=3D"font-size:14px;color:#919191;font-weight:normal;text-align:c=
+enter;font-family:Arial,Helvetica,sans-serif"> <div><div><strong>=C2=A9 202=
+2 Analytics Vidhya</strong></div> </div> </td></tr> <tr> <td height=3D"20" =
+style=3D"font-size:1px;line-height:20px;mso-hide:all">=C2=A0</td> </tr> </t=
+body></table> </td> </tr> </tbody></table> </div></td> </tr></tbody></table=
+> <!--[if gte mso 9]> </td> </tr> </table> <![endif]--> </td> </tr> </tbody=
+></table> <div align=3D"center" style=3D"color:#727272;font-size:10px">If y=
+ou wish to unsubscribe from our newsletter, click <a style=3D"color:#01a4c6=
+" target=3D"_blank" href=3D"http://r.newsletters.analyticsvidhya.com/mk/un/=
+Sx91Vr-0L6WmbKxYtSCxB8L442pn0gD59q0scfm-dm6EaDnIMXIP2dkSyV9pj1LSm3ynWmqPiew=
+a1IThNg6qGAq6jrAmcptedOFETu-9izUqXTyfKtiYYmR-78D2yL30M2BMyabeHcx3V6gORfDzK3=
+J_FgM9XkHo4s5V8fmUUOQjJuHsEcsYWy2ynPjzLfqR06pBakEGyBk">here</a></div><div><=
+img width=3D"1" height=3D"1" src=3D"http://r.newsletters.analyticsvidhya.co=
+m/mk/op/UmE2yKAR3v3HaWobLt_p4-Pk0GeBP0scbRcR5N0piI48eVWKw0r45VBrDJOGltwm2rW=
+NIidVFH9FXHb-nOuPBzsCi85n9Z9VGQW1IDG_GrZIXx0HidnNBVJ6nVl9X32cNs0i9vU1ccm4tT=
+fm22hK2IpYvN4"/></div> </body></html>
+
+---------?=_49129-9489642943509--
+
