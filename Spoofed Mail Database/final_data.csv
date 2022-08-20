@@ -1,0 +1,131 @@
+ID,To,Created,MIME,From.Relays,From.Mailbox,From.Domain,From.Params,Content.Headers.Content-Transfer-Encoding,Content.Headers.Content-Type,Content.Headers.Date,Content.Headers.From,Content.Headers.MIME-Version,Content.Headers.Message-ID,Content.Headers.Received,Content.Headers.Return-Path,Content.Headers.Subject,Content.Headers.To,Content.Body,Content.Size,Content.MIME,Raw.From,Raw.To,Raw.Data,Raw.Helo
+Ub1xkWcAj-wwlWTyI7Xc7zA1AVUKrXSKt38s8pexXoA=@mailhog.example,"[{'Relays': None, 'Mailbox': 'satyamk', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T09:03:33.9369498Z,,,vaibhavr,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 09:03:33 +0000']",['vaibhavr@juet.in'],['1.0'],['<7702e5db-47bb-6b22-6404-6e949863258d@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id Ub1xkWcAj-wwlWTyI7Xc7zA1AVUKrXSKt38s8pexXoA=@mailhog.example; Mon, 15 Aug 2022 09:03:33 +0000']",['<vaibhavr@juet.in>'],['Knorrr'],['satyamk@juet.in'],Knorr soup banake rkho mee aa rha hu,292,,vaibhavr@juet.in,['satyamk@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: vaibhavr@juet.in
+To: satyamk@juet.in
+Subject: Knorrr
+Message-ID: <7702e5db-47bb-6b22-6404-6e949863258d@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 09:03:33 +0000
+MIME-Version: 1.0
+
+Knorr soup banake rkho mee aa rha hu",[127.0.0.1]
+LZsUUTeNS_9buTa2QrXME09EGbIjQSRfRH2gORjiX8k=@mailhog.example,"[{'Relays': None, 'Mailbox': 'jungle2002', 'Domain': 'gmail.com', 'Params': ''}]",2022-08-15T09:02:33.4428185Z,,,utkarshmathur05,gmail.com,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 09:02:33 +0000']",['utkarshmathur05@gmail.com'],['1.0'],['<e34d212c-4af0-ed0a-185f-10236d2e8bfa@gmail.com>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id LZsUUTeNS_9buTa2QrXME09EGbIjQSRfRH2gORjiX8k=@mailhog.example; Mon, 15 Aug 2022 09:02:33 +0000']",['<utkarshmathur05@gmail.com>'],['Tanish Encrypted'],['jungle2002@gmail.com'],Swa........,293,,utkarshmathur05@gmail.com,['jungle2002@gmail.com'],"Content-Type: text/plain; charset=utf-8
+From: utkarshmathur05@gmail.com
+To: jungle2002@gmail.com
+Subject: Tanish Encrypted
+Message-ID: <e34d212c-4af0-ed0a-185f-10236d2e8bfa@gmail.com>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 09:02:33 +0000
+MIME-Version: 1.0
+
+Swa........",[127.0.0.1]
+mmfffWyzb-7xZvvAPRbWVesUHkm0ltQk0eneWyyAXuQ=@mailhog.example,"[{'Relays': None, 'Mailbox': 'jungle2002', 'Domain': 'gmail.com', 'Params': ''}]",2022-08-15T09:02:33.3472134Z,,,utkarshmathur05,gmail.com,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 09:02:33 +0000']",['utkarshmathur05@gmail.com'],['1.0'],['<67affa38-47aa-72ea-24f3-4d7c67da8957@gmail.com>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id mmfffWyzb-7xZvvAPRbWVesUHkm0ltQk0eneWyyAXuQ=@mailhog.example; Mon, 15 Aug 2022 09:02:33 +0000']",['<utkarshmathur05@gmail.com>'],['Tanish Encrypted'],['jungle2002@gmail.com'],Swa........,293,,utkarshmathur05@gmail.com,['jungle2002@gmail.com'],"Content-Type: text/plain; charset=utf-8
+From: utkarshmathur05@gmail.com
+To: jungle2002@gmail.com
+Subject: Tanish Encrypted
+Message-ID: <67affa38-47aa-72ea-24f3-4d7c67da8957@gmail.com>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 09:02:33 +0000
+MIME-Version: 1.0
+
+Swa........",[127.0.0.1]
+mwcdxT1V2e9Q5LfyAdkVYWiPT5KvsVW-ounOU6qDJxc=@mailhog.example,"[{'Relays': None, 'Mailbox': 'utkarshm', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T09:02:24.4731402Z,,,mukulk,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 09:02:24 +0000']",['mukulk@juet.in'],['1.0'],['<5eba9f7d-9129-3d17-50e0-41edd3bfee92@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id mwcdxT1V2e9Q5LfyAdkVYWiPT5KvsVW-ounOU6qDJxc=@mailhog.example; Mon, 15 Aug 2022 09:02:24 +0000']",['<mukulk@juet.in>'],['Hii '],['utkarshm@juet.in'],Gandi naali ka keeraa,274,,mukulk@juet.in,['utkarshm@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: mukulk@juet.in
+To: utkarshm@juet.in
+Subject: Hii 
+Message-ID: <5eba9f7d-9129-3d17-50e0-41edd3bfee92@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 09:02:24 +0000
+MIME-Version: 1.0
+
+Gandi naali ka keeraa",[127.0.0.1]
+BhxnkTjuK8JTxt4oZmqh6YD2k34Bx9PcLxtDz1AIsKk=@mailhog.example,"[{'Relays': None, 'Mailbox': 'mukulk', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T09:01:52.4615664Z,,,shramitg,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 09:01:52 +0000']",['shramitg@juet.in'],['1.0'],['<da5c2c29-cfcf-d1e9-1f92-8116dd358d90@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id BhxnkTjuK8JTxt4oZmqh6YD2k34Bx9PcLxtDz1AIsKk=@mailhog.example; Mon, 15 Aug 2022 09:01:52 +0000']",['<shramitg@juet.in>'],['Keyboard '],['mukulk@juet.in'],Buy this keyboard in 299 https://amzn.eu/d/hoYJwGO,308,,shramitg@juet.in,['mukulk@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: shramitg@juet.in
+To: mukulk@juet.in
+Subject: Keyboard 
+Message-ID: <da5c2c29-cfcf-d1e9-1f92-8116dd358d90@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 09:01:52 +0000
+MIME-Version: 1.0
+
+Buy this keyboard in 299 https://amzn.eu/d/hoYJwGO",[127.0.0.1]
+DxvFle5_0TcHw7uJ4HlgikCABs2d-bDRknHwcvWCL8g=@mailhog.example,"[{'Relays': None, 'Mailbox': 'swapnilp', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T09:00:09.7850638Z,,,mukulk,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 09:00:09 +0000']",['mukulk@juet.in'],['1.0'],['<a4c90ab1-4558-514c-f66f-40ace5023703@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id DxvFle5_0TcHw7uJ4HlgikCABs2d-bDRknHwcvWCL8g=@mailhog.example; Mon, 15 Aug 2022 09:00:09 +0000']",['<mukulk@juet.in>'],['Guitar band kr'],['swapnilp@juet.in'],"Kitna bajayega, sone dede neend aa rhi h",303,,mukulk@juet.in,['swapnilp@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: mukulk@juet.in
+To: swapnilp@juet.in
+Subject: Guitar band kr
+Message-ID: <a4c90ab1-4558-514c-f66f-40ace5023703@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 09:00:09 +0000
+MIME-Version: 1.0
+
+Kitna bajayega, sone dede neend aa rhi h",[127.0.0.1]
+dUyoTIlTzTE5BFZfYHU6QDWEYIl0-WX7D1vouHe3Zko=@mailhog.example,"[{'Relays': None, 'Mailbox': 'swapnilp', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T08:59:23.7289873Z,,,tanishk,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:59:23 +0000']",['tanishk@juet.in'],['1.0'],['<d1fa7ce3-dee4-2383-90a5-b900aedaced2@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id dUyoTIlTzTE5BFZfYHU6QDWEYIl0-WX7D1vouHe3Zko=@mailhog.example; Mon, 15 Aug 2022 08:59:23 +0000']",['<tanishk@juet.in>'],['Expell'],['swapnilp@juet.in'],Mathur ko room se nikal de bcc,286,,tanishk@juet.in,['swapnilp@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: tanishk@juet.in
+To: swapnilp@juet.in
+Subject: Expell
+Message-ID: <d1fa7ce3-dee4-2383-90a5-b900aedaced2@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:59:23 +0000
+MIME-Version: 1.0
+
+Mathur ko room se nikal de bcc",[127.0.0.1]
+NpV95mOJbF_q5KsIhDBefGYsiyQL_yvxotzC8OZGiRc=@mailhog.example,"[{'Relays': None, 'Mailbox': 'jungle2002', 'Domain': 'gmail.com', 'Params': ''}]",2022-08-15T08:58:17.8123031Z,,,utkarshmathur05,gmail.com,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:58:17 +0000']",['utkarshmathur05@gmail.com'],['1.0'],['<cb13c760-e631-a544-4b84-7338e4521557@gmail.com>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id NpV95mOJbF_q5KsIhDBefGYsiyQL_yvxotzC8OZGiRc=@mailhog.example; Mon, 15 Aug 2022 08:58:17 +0000']",['<utkarshmathur05@gmail.com>'],['Hello'],['jungle2002@gmail.com'],Tanish Lodu,282,,utkarshmathur05@gmail.com,['jungle2002@gmail.com'],"Content-Type: text/plain; charset=utf-8
+From: utkarshmathur05@gmail.com
+To: jungle2002@gmail.com
+Subject: Hello
+Message-ID: <cb13c760-e631-a544-4b84-7338e4521557@gmail.com>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:58:17 +0000
+MIME-Version: 1.0
+
+Tanish Lodu",[127.0.0.1]
+FB1liBwVnvJ81kJxPV7ON8c9D6VyyGwf98N8Y3DcbU4=@mailhog.example,"[{'Relays': None, 'Mailbox': 'utkarshm', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T08:57:42.5737035Z,,,vaibhavr,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:57:42 +0000']",['vaibhavr@juet.in'],['1.0'],['<2a602142-5a22-802a-4f0c-3d3db7e7394f@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id FB1liBwVnvJ81kJxPV7ON8c9D6VyyGwf98N8Y3DcbU4=@mailhog.example; Mon, 15 Aug 2022 08:57:42 +0000']",['<vaibhavr@juet.in>'],['Khana bana de'],['utkarshm@juet.in'],"Jhansi jana h, bus ki ticket milegi??",301,,vaibhavr@juet.in,['utkarshm@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: vaibhavr@juet.in
+To: utkarshm@juet.in
+Subject: Khana bana de
+Message-ID: <2a602142-5a22-802a-4f0c-3d3db7e7394f@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:57:42 +0000
+MIME-Version: 1.0
+
+Jhansi jana h, bus ki ticket milegi??",[127.0.0.1]
+dNRPSRNMUNYVOemh9pJSpJ5rwLsYnKVY2qrRkgYNV0U=@mailhog.example,"[{'Relays': None, 'Mailbox': 'tanishk', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T08:56:23.1951323Z,,,utkarshm,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:56:23 +0000']",['utkarshm@juet.in'],['1.0'],['<b3ab549c-fb04-6523-788e-573f0f704565@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id dNRPSRNMUNYVOemh9pJSpJ5rwLsYnKVY2qrRkgYNV0U=@mailhog.example; Mon, 15 Aug 2022 08:56:23 +0000']",['<utkarshm@juet.in>'],['Satyam'],['tanishk@juet.in'],Maagi ban gyi h aha,275,,utkarshm@juet.in,['tanishk@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: utkarshm@juet.in
+To: tanishk@juet.in
+Subject: Satyam
+Message-ID: <b3ab549c-fb04-6523-788e-573f0f704565@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:56:23 +0000
+MIME-Version: 1.0
+
+Maagi ban gyi h aha",[127.0.0.1]
+jW66LMbZOVeNUm9pOTAAPQZgDyUQ_Qf_yp23Kotj8xY=@mailhog.example,"[{'Relays': None, 'Mailbox': 'satyamk', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T08:54:27.4341437Z,,,tanishk,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:54:27 +0000']",['tanishk@juet.in'],['1.0'],['<1efa286e-cf87-9d32-fee6-70bd9cc40ce6@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id jW66LMbZOVeNUm9pOTAAPQZgDyUQ_Qf_yp23Kotj8xY=@mailhog.example; Mon, 15 Aug 2022 08:54:27 +0000']",['<tanishk@juet.in>'],['Mathur'],['satyamk@juet.in'],Room se nikaal room se,277,,tanishk@juet.in,['satyamk@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: tanishk@juet.in
+To: satyamk@juet.in
+Subject: Mathur
+Message-ID: <1efa286e-cf87-9d32-fee6-70bd9cc40ce6@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:54:27 +0000
+MIME-Version: 1.0
+
+Room se nikaal room se",[127.0.0.1]
+OgP084HtvqJHFwUH3gbNp70NY7tU0eg3OS_OawM3bUI=@mailhog.example,"[{'Relays': None, 'Mailbox': 'tanishk', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T08:53:42.2696382Z,,,utkarshm,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:53:42 +0000']",['utkarshm@juet.in'],['1.0'],['<11821946-8cdb-de13-6b45-7341033ef210@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id OgP084HtvqJHFwUH3gbNp70NY7tU0eg3OS_OawM3bUI=@mailhog.example; Mon, 15 Aug 2022 08:53:42 +0000']",['<utkarshm@juet.in>'],['DL'],['tanishk@juet.in'],Yolov5 krne me kitne din lagege?,284,,utkarshm@juet.in,['tanishk@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: utkarshm@juet.in
+To: tanishk@juet.in
+Subject: DL
+Message-ID: <11821946-8cdb-de13-6b45-7341033ef210@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:53:42 +0000
+MIME-Version: 1.0
+
+Yolov5 krne me kitne din lagege?",[127.0.0.1]
+CEiQO8am699MHh5oZWtneq0-mv038FJ8ig46HiNkYAk=@mailhog.example,"[{'Relays': None, 'Mailbox': 'utkarshm', 'Domain': 'juet.in', 'Params': ''}]",2022-08-15T08:53:03.0002669Z,,,satyamk,juet.in,,['7bit'],['text/plain; charset=utf-8'],"['Mon, 15 Aug 2022 08:53:02 +0000']",['satyamk@juet.in'],['1.0'],['<96911f28-9cfe-f03f-3c3d-796f09931a7d@juet.in>'],"['from [127.0.0.1] by mailhog.example (MailHog)\r\n          id CEiQO8am699MHh5oZWtneq0-mv038FJ8ig46HiNkYAk=@mailhog.example; Mon, 15 Aug 2022 08:53:03 +0000']",['<satyamk@juet.in>'],['Room no. 35'],['utkarshm@juet.in'],Maagii bana denaa,278,,satyamk@juet.in,['utkarshm@juet.in'],"Content-Type: text/plain; charset=utf-8
+From: satyamk@juet.in
+To: utkarshm@juet.in
+Subject: Room no. 35
+Message-ID: <96911f28-9cfe-f03f-3c3d-796f09931a7d@juet.in>
+Content-Transfer-Encoding: 7bit
+Date: Mon, 15 Aug 2022 08:53:02 +0000
+MIME-Version: 1.0
+
+Maagii bana denaa",[127.0.0.1]
