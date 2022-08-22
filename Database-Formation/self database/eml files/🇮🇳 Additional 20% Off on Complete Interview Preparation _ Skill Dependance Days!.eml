@@ -1,0 +1,477 @@
+Delivered-To: sirdonaldfrancesco015@gmail.com
+Received: by 2002:a05:6359:4287:b0:b3:862c:9b88 with SMTP id kp7csp294927rwb;
+        Sat, 13 Aug 2022 03:19:50 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR7MatAlBD6s8vZ3hDq91H8FCMiKJ3uhs83Uw/HQUD8eARkxtD0HvNBJGx039jb65jGO8o8H
+X-Received: by 2002:a62:18c1:0:b0:52f:a817:d98a with SMTP id 184-20020a6218c1000000b0052fa817d98amr7654521pfy.61.1660385989960;
+        Sat, 13 Aug 2022 03:19:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1660385989; cv=none;
+        d=google.com; s=arc-20160816;
+        b=0wft4xW2qlzAS5UpBwUabuz3XiHrgNkM5WH46HOSt2LuToWGdqN+q0NVI3FWsMK31E
+         0fbEy1tQ6ULtzl5NhIaYakJrybkme20KOe5yEk50AC1ECMtY6u6M+d66pq99CpE67F3Q
+         aSuem43I2UT/bHTN46Y3g1S5qS8gjtLs4U+Lm6fuHNEquJxo4JofFr3efq5AZHqHTRpo
+         3xlXLqkHdeuj6tKdO/AAqz2/pMANT+7SkGBqjX4j4no8yjFOamPEVyyjrXn2Xmp3G4Js
+         KPmwjaNkLoLvz6I9/FqP7F5sawvRBFXvM5EQ4laTIQN+ds3BUZ4KryRhAsm+9i4h3avA
+         mHug==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:mime-version:subject:to:reply-to:from
+         :dkim-signature:dkim-signature;
+        bh=ruAyhtunda1bMgonGNj0jGTIct7X/ntsxmJRc4kvm5w=;
+        b=CktvYgsu+7lC8PbjqdLpJ//KOwLIlRi+Es6xzQOJhZzg2J9K7PEd6i6Ojqf9amH4vD
+         iaAUhxqbYPia4An9JOqlItY9uE7ftNWCI+3YIKktEbUc748Qp7sDLAV+T+W+Zo7TPvxC
+         3pdpM343Q2/ltDN9/RK/rS2SbK7/DjZuAiCUAwNSYr4ALMh/4a0sJ/Viwpmsst0QHlZR
+         XIXzaFGsoQjmJl4/JJUqdqLMcp4LYjjFAoTczLGw5QbGeMItY2hd6sbgp/2qt9dn2Ibz
+         PCxYsA1qcvKmTVdxBKx9WmPYRh7tS+JoPZhiTOuhfxakQzqmtKUnRz+pdBYtgM+0JVS2
+         P4IA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@geeksforgeeks.org header.s=3usq2bfnfgf22jeknktfok3ygti3oyz5 header.b=MzPdudFJ;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=dlmBOG+s;
+       spf=pass (google.com: domain of 0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com designates 54.240.57.30 as permitted sender) smtp.mailfrom=0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=geeksforgeeks.org
+Return-Path: <0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com>
+Received: from a57-30.smtp-out.us-west-2.amazonses.com (a57-30.smtp-out.us-west-2.amazonses.com. [54.240.57.30])
+        by mx.google.com with ESMTPS id w16-20020a170902e89000b0016ee19bc5f9si4246264plg.553.2022.08.13.03.19.49
+        for <sirdonaldfrancesco015@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 13 Aug 2022 03:19:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com designates 54.240.57.30 as permitted sender) client-ip=54.240.57.30;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@geeksforgeeks.org header.s=3usq2bfnfgf22jeknktfok3ygti3oyz5 header.b=MzPdudFJ;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=dlmBOG+s;
+       spf=pass (google.com: domain of 0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com designates 54.240.57.30 as permitted sender) smtp.mailfrom=0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=geeksforgeeks.org
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=3usq2bfnfgf22jeknktfok3ygti3oyz5; d=geeksforgeeks.org;
+	t=1660385989;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date;
+	bh=zJyQIJEqcILModTy8qZ04bho1lY+isfw1yQKb3Z1ckQ=;
+	b=MzPdudFJDtGYENZf2ZrsgXeLrArmbtUheShr4027WrLv03aF+aLF0oyo4oQBoFo4
+	8xLjgUELIUGskX7bEbGgcDp9/vbeEonB4oAUoDEZ7lQ/N0HZQbo0HtPBr0YESSDuGLh
+	jprLNC1hXxm2hXSjtRJCAZfHdmNhmd8+/2N4rs88=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1660385989;
+	h=From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Date:Feedback-ID;
+	bh=zJyQIJEqcILModTy8qZ04bho1lY+isfw1yQKb3Z1ckQ=;
+	b=dlmBOG+sB7f2t0vUb9vYx8RLZB9H08dXwZm+b+BPNceDAWaxr1UfzCg88ibGL1bW
+	CqU2mKfCMYJV3AjCM0EIA3ssUWcf+5pjw0LE6DU2XnLW5q2Qq7RF1qZyFQlzyh/865k
+	+L3Rs4/8g09qdNdMHlSzROYO1xGrZZ7vwQKWUEI0=
+From: GeeksforGeeks <no-reply@geeksforgeeks.org>
+Reply-To: khushi.gupta@geeksforgeeks.org
+To: sirdonaldfrancesco015@gmail.com
+Subject: =?UTF-8?Q?=F0=9F=87=AE=F0=9F=87=B3_Additional_20%_Off_on_Complete_Inter?=
+ =?UTF-8?Q?view_Preparation_|_Skill_Dependance_Days!?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_5723610_918315740.1660385989391"
+Message-ID: <0101018296b7930d-bc233775-5c99-40b4-84ac-cff3a87925ca-000000@us-west-2.amazonses.com>
+Date: Sat, 13 Aug 2022 10:19:49 +0000
+Feedback-ID: 1.us-west-2./TBjKWUgPnMTk3cvFInNvq1o9VXc945X17xQ0jWk78c=:AmazonSES
+X-SES-Outgoing: 2022.08.13-54.240.57.30
+
+------=_Part_5723610_918315740.1660385989391
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+------=_Part_5723610_918315740.1660385989391
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta http-equiv=3D"Content-type" content=3D"text/html; charset=3Dutf-8=
+" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, maximum-scale=3D1" />
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />
+    <meta name=3D"format-detection" content=3D"date=3Dno" />
+    <meta name=3D"format-detection" content=3D"address=3Dno" />
+    <meta name=3D"format-detection" content=3D"telephone=3Dno" />
+    <title>
+    </title>
+    <style type=3D"text/css" media=3D"screen">
+      /* Linked Styles */
+      body {
+        padding:0 !important;
+        margin:0 !important;
+        display:block !important;
+        background:#1e1e1e;
+        -webkit-text-size-adjust:none }
+      a {
+        color:#a88123;
+        text-decoration:none }
+      p {
+        padding:0 !important;
+        margin:0 !important }
+      /* Mobile styles */
+    </style>
+    <style media=3D"only screen and (max-device-width: 480px), only screen =
+and (max-width: 480px)" type=3D"text/css">
+      @media only screen and (max-device-width: 480px), only screen and (ma=
+x-width: 480px) {
+        div[class=3D'mobile-br-5'] {
+          height: 5px !important;
+        }
+        div[class=3D'mobile-br-10'] {
+          height: 10px !important;
+        }
+        div[class=3D'mobile-br-15'] {
+          height: 15px !important;
+        }
+        div[class=3D'mobile-br-20'] {
+          height: 20px !important;
+        }
+        div[class=3D'mobile-br-25'] {
+          height: 25px !important;
+        }
+        div[class=3D'mobile-br-30'] {
+          height: 30px !important;
+        }
+        th[class=3D'm-td'],=20
+        td[class=3D'm-td'],=20
+        div[class=3D'hide-for-mobile'],=20
+        span[class=3D'hide-for-mobile'] {
+          display: none !important;
+          width: 0 !important;
+          height: 0 !important;
+          font-size: 0 !important;
+          line-height: 0 !important;
+          min-height: 0 !important;
+        }
+        span[class=3D'mobile-block'] {
+          display: block !important;
+        }
+        div[class=3D'wgmail'] img {
+          min-width: 320px !important;
+          width: 320px !important;
+        }
+        div[class=3D'img-m-center'] {
+          text-align: center !important;
+        }
+        div[class=3D'fluid-img'] img,
+        td[class=3D'fluid-img'] img {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        table[class=3D'mobile-shell'] {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
+        td[class=3D'td'] {
+          width: 100% !important;
+          min-width: 100% !important;
+        }
+        table[class=3D'center'] {
+          margin: 0 auto;
+        }
+        td[class=3D'column-top'],
+        th[class=3D'column-top'],
+        td[class=3D'column'],
+        th[class=3D'column'] {
+          float: left !important;
+          width: 100% !important;
+          display: block !important;
+        }
+        td[class=3D'content-spacing'] {
+          width: 15px !important;
+        }
+        div[class=3D'h2'] {
+          font-size: 44px !important;
+          line-height: 48px !important;
+        }
+      }
+      .button-td,
+      .button-a {
+        transition: all 100ms ease-in;
+      }
+      .button-td:hover,
+      .button-a:hover {
+        background: #555555 !important;
+        border-color: #555555 !important;
+      }
+    </style>
+  </head>
+  <body class=3D"body" style=3D"padding:0 !important; margin:0 !important; =
+display:block !important; background:#ffffff; -webkit-text-size-adjust:none=
+">
+<p>=C2=A0</p>
+<table style=3D"height: 1255px;" border=3D"0" width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" bgcolor=3D"#ffffff">
+<tbody>
+<tr style=3D"height: 1255px;">
+<td style=3D"height: 1255px;" align=3D"center" valign=3D"top"><!-- Top --> =
+<!-- END Top -->
+<table class=3D"mobile-shell" border=3D"0" width=3D"550" cellspacing=3D"0" =
+cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"td" style=3D"font-size: 0pt; line-height: 0pt; padding: 0; mar=
+gin: 0; font-weight: normal; width: 550px; min-width: 550px;" width=3D"550"=
+>=E2=9A=A1=EF=B8=8FWith Placement season on the way, GeeksforGeeks has got =
+your back! Prepare for Placements the right way!=E2=9A=A1=EF=B8=8F<!-- Main=
+ -->
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td><!-- Body -->
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#ffffff">
+<tbody>
+<tr>
+<td>
+<div class=3D"fluid-img" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: left;"><a href=3D"https://notifications.geeksforgeeks.org/scripts/trac=
+k-url.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2Cw%3D&papjw=3D3gmeS9w%2F1S3Rfg%3=
+D%3D&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"> <img src=
+=3D"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220813092029/C=
+IP-41.jpg" alt=3D"" width=3D"550" height=3D"" border=3D"0" /> </a>
+</div>
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td>
+<table class=3D"spacer" style=3D"font-size: 0pt; line-height: 0pt; text-ali=
+gn: center; width: 100%; min-width: 100%; height: 10px;" border=3D"0" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr style=3D"height: 10px;">
+<td class=3D"spacer" style=3D"font-size: 0pt; line-height: 0pt; text-align:=
+ center; width: 100%; min-width: 100%; height: 10px;" height=3D"35">=C2=A0<=
+/td>
+</tr>
+</tbody>
+</table>
+<table style=3D"height: 64.2969px;" border=3D"0" width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0">
+<tbody>
+<tr style=3D"height: 10px;">
+<td style=3D"font-size: 0pt; line-height: 0pt; text-align: left; height: 10=
+px;">=C2=A0</td>
+<td style=3D"height: 10px;">
+<p>=C2=A0</p>
+</td>
+<td style=3D"font-size: 0pt; line-height: 0pt; text-align: left; height: 10=
+px;">=C2=A0</td>
+</tr>
+<tr style=3D"height: 10px;">
+<td style=3D"font-size: 0pt; line-height: 0pt; text-align: left; height: 10=
+px;">=C2=A0</td>
+<td style=3D"height: 10px;">
+<p>=C2=A0</p>
+</td>
+<td style=3D"font-size: 0pt; line-height: 0pt; text-align: left; height: 10=
+px;">=C2=A0</td>
+</tr>
+<tr style=3D"height: 44.2969px;">
+<td class=3D"content-spacing" style=3D"font-size: 0pt; line-height: 0pt; te=
+xt-align: left; height: 44.2969px;" width=3D"20">=C2=A0</td>
+<td style=3D"height: 44.2969px;"><!-- Button -->
+<p>=C2=A0</p>
+<p>=C2=A0</p>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><!=
+-- Button -->
+<tbody>
+<tr>
+<td align=3D"center">
+<table style=3D"margin: auto;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center">
+<tbody>
+<tr>
+<td class=3D"button-td" style=3D"border-radius: 3px; background: #222222; t=
+ext-align: center;">
+<p>=C2=A0</p>
+<p><a class=3D"button-a" style=3D"background: #0f2b3c; border: 15px solid #=
+0f2b3c; font-family: 'Open Sans', Verdana, Arial, sans-serif; font-size: 13=
+px; line-height: 1.1; text-align: center; text-decoration: none; display: b=
+lock; border-radius: 3px; font-weight: bold;" href=3D"https://notifications=
+.geeksforgeeks.org/scripts/track-url.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2C=
+w%3D&papjw=3D3gmeS9w%2F1S3Rfg%3D%3D&inhzn=3DzheeTdkz0Q%3D%3D"><span style=
+=3D"color: #ffffff;">GFG Karlo, Ho Jayega!</span>=C2=A0=C2=A0=C2=A0=C2=A0 <=
+/a>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<!-- END Button --></tbody>
+</table>
+<p>=C2=A0</p>
+<p><!-- END Button --></p>
+</td>
+<td class=3D"content-spacing" style=3D"font-size: 0pt; line-height: 0pt; te=
+xt-align: left; height: 44.2969px;" width=3D"20">=C2=A0</td>
+</tr>
+<tr style=3D"height: 0px;">
+<td style=3D"font-size: 0pt; line-height: 0pt; text-align: left; height: 0p=
+x;">=C2=A0</td>
+<td style=3D"height: 0px;">
+<p>=C2=A0</p>
+</td>
+<td style=3D"font-size: 0pt; line-height: 0pt; text-align: left; height: 0p=
+x;">=C2=A0</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class=3D"content-spacing" style=3D"font-size: 0pt; line-height: 0pt; te=
+xt-align: left;" width=3D"20">=C2=A0</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<div class=3D"fluid-img" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: left;">=C2=A0</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- END Body --> <!-- Foot -->
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bgco=
+lor=3D"#ffffff">
+<tbody>
+<tr>
+<td>
+<div style=3D"max-width: 600px; margin: auto;">=C2=A0</div>
+<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"img" style=3D"font-size: 0pt; line-height: 0pt; text-align: le=
+ft;" bgcolor=3D"#ffffff" width=3D"3">=C2=A0</td>
+<td>
+<div class=3D"h3-1-center" style=3D"color: #000000; font-family: 'Open Sans=
+', Verdana, Arial, sans-serif; min-width: auto !important; font-size: 17px;=
+ line-height: 26px; text-align: center;">
+<p style=3D"caret-color: #888888; color: #888888; font-family: sans-serif; =
+font-size: 12px;">=C2=A0</p>
+<p style=3D"caret-color: #888888; color: #888888; font-family: sans-serif; =
+font-size: 12px;"><span class=3D"mobile-link--footer" style=3D"text-size-ad=
+just: 100%;"><a style=3D"font-family: -apple-system, 'system-ui', 'Segoe UI=
+', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-s=
+erif; font-size: 0px;" href=3D"https://notifications.geeksforgeeks.org/scri=
+pts/track-url.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2C8%3D&papjw=3D3gmeS9w%2F=
+1S3Rfg%3D%3D&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"><=
+img src=3D"https://cdncontribute.geeksforgeeks.org/wp-content/uploads/faceb=
+ook.png" alt=3D"" width=3D"28" height=3D"28" border=3D"0" /> =C2=A0</a>
+ </span><a style=3D"font-family: -apple-system, 'system-ui', 'Segoe UI', Ro=
+boto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;=
+ font-size: 0px;" href=3D"https://notifications.geeksforgeeks.org/scripts/t=
+rack-url.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2C4%3D&papjw=3D3gmeS9w%2F1S3Rf=
+g%3D%3D&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"><img s=
+rc=3D"https://cdncontribute.geeksforgeeks.org/wp-content/uploads/instagram.=
+png" alt=3D"" width=3D"28" height=3D"28" border=3D"0" /></a>
+ <a style=3D"font-family: -apple-system, 'system-ui', 'Segoe UI', Roboto, O=
+xygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-s=
+ize: 0px;" href=3D"https://notifications.geeksforgeeks.org/scripts/track-ur=
+l.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2Ck%3D&papjw=3D3gmeS9w%2F1S3Rfg%3D%3D=
+&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"><img src=3D"h=
+ttps://cdncontribute.geeksforgeeks.org/wp-content/uploads/youtube.png" alt=
+=3D"" width=3D"28" height=3D"28" border=3D"" /></a>
+ <a style=3D"font-family: -apple-system, 'system-ui', 'Segoe UI', Roboto, O=
+xygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-s=
+ize: 0px;" href=3D"https://notifications.geeksforgeeks.org/scripts/track-ur=
+l.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2Cg%3D&papjw=3D3gmeS9w%2F1S3Rfg%3D%3D=
+&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"><img src=3D"h=
+ttps://cdncontribute.geeksforgeeks.org/wp-content/uploads/twitter.png" alt=
+=3D"" width=3D"28" height=3D"28" border=3D"0" /></a>
+ <a style=3D"font-family: -apple-system, 'system-ui', 'Segoe UI', Roboto, O=
+xygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-s=
+ize: 0px;" href=3D"https://notifications.geeksforgeeks.org/scripts/track-ur=
+l.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2Cs%3D&papjw=3D3gmeS9w%2F1S3Rfg%3D%3D=
+&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"><img src=3D"h=
+ttps://media.geeksforgeeks.org/wp-content/cdn-uploads/20201028104523/pinter=
+est-logo.png" alt=3D"" width=3D"28" height=3D"28" border=3D"0" /></a>
+ <a style=3D"font-family: -apple-system, 'system-ui', 'Segoe UI', Roboto, O=
+xygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-s=
+ize: 0px;" href=3D"https://notifications.geeksforgeeks.org/scripts/track-ur=
+l.php?cojpq=3Dtkvlv&ehhjk=3D3xGeTtw%2F2Co%3D&papjw=3D3gmeS9w%2F1S3Rfg%3D%3D=
+&inhzn=3DzheeTdkz0Q%3D%3D" target=3D"_blank" rel=3D"noopener"><img src=3D"h=
+ttps://media.geeksforgeeks.org/wp-content/cdn-uploads/20210526173228/Playst=
+ore.png" alt=3D"" width=3D"28" height=3D"28" border=3D"" /></a>
+</p>
+<p style=3D"caret-color: #888888; color: #888888; font-family: sans-serif; =
+font-size: 12px;"><span class=3D"mobile-link--footer" style=3D"text-size-ad=
+just: 100%;">If you have any queries reach us at: +91-7903436178</span></p>
+<p style=3D"caret-color: #888888; color: #888888; font-family: sans-serif; =
+font-size: 12px;">I wish to miss such awesome updates and=C2=A0<a style=3D"=
+font-family: 'Open Sans', Verdana, Arial, sans-serif; font-size: 10px; line=
+-height: 20px; color: #212121; text-transform: uppercase; text-decoration: =
+underline;" href=3D"https://notifications.geeksforgeeks.org/scripts/track-u=
+rl.php?cojpq=3Dgsmao&ehhjk=3D3xGeTtw%2F2CU%3D&inhzn=3DzheeTdkz0Q%3D%3D&papj=
+w=3D3gmeS9w%2F1S3Rfg%3D%3D" target=3D"_blank" rel=3D"noopener">UNSUBSCRIBE<=
+/a>
+</p>
+</div>
+<!-- Socials -->
+<table style=3D"height: 28px;" border=3D"0" width=3D"100%" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td>
+<p>=C2=A0</p>
+</td>
+</tr>
+<tr style=3D"height: 28px;">
+<td style=3D"height: 28px;" align=3D"center">
+<p>=C2=A0</p>
+<table style=3D"width: 41.6819%; height: 28px;" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0">
+<tbody>
+<tr style=3D"height: 28px;">
+<td class=3D"img-center" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: center; width: 16.6667%; height: 28px;" width=3D"38">=C2=A0</td>
+<td class=3D"img-center" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: center; width: 16.6667%; height: 28px;" width=3D"38">=C2=A0</td>
+<td class=3D"img-center" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: center; width: 16.6667%; height: 28px;" width=3D"38">=C2=A0</td>
+<td class=3D"img-center" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: center; width: 16.6667%; height: 28px;" width=3D"38">=C2=A0</td>
+<td class=3D"img-center" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: center; width: 16.6667%; height: 28px;" width=3D"38">=C2=A0</td>
+<td class=3D"img-center" style=3D"font-size: 0pt; line-height: 0pt; text-al=
+ign: center; width: 16.6667%; height: 28px;" width=3D"38">=C2=A0</td>
+</tr>
+</tbody>
+</table>
+<p>=C2=A0</p>
+<p>=C2=A0</p>
+<p>=C2=A0</p>
+</td>
+</tr>
+<tr>
+<td>=C2=A0</td>
+</tr>
+</tbody>
+</table>
+<!-- END Socials --></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- END Foot --></td>
+</tr>
+</tbody>
+</table>
+<!-- END Main --> <!-- Footer --> <!-- END Footer --></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html><img height=3D'1' width=3D'1' src=3D'https://notifications.geeksforg=
+eeks.org/scripts/track-url.php?cojpq=3Dmosjx&wwvoc=3D2B2eSNA%3D&papjw=3D3gm=
+eS9w%2F1S3Rfg%3D%3D&inhzn=3DzheeTdkz0Q%3D%3D'>
+------=_Part_5723610_918315740.1660385989391--

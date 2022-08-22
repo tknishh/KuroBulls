@@ -1,0 +1,548 @@
+Delivered-To: sirdonaldfrancesco015@gmail.com
+Received: by 2002:a05:6359:4287:b0:b3:862c:9b88 with SMTP id kp7csp92487rwb;
+        Thu, 18 Aug 2022 01:43:37 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR4a2WkRy/jbo7UTko4JAfeuov12x5DGRNFwGoh3spBGBqRAQjdD2Ur+vgKvd4MzNbWgi+au
+X-Received: by 2002:a05:6214:c85:b0:476:ef65:5495 with SMTP id r5-20020a0562140c8500b00476ef655495mr1491688qvr.88.1660812217749;
+        Thu, 18 Aug 2022 01:43:37 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1660812217; cv=none;
+        d=google.com; s=arc-20160816;
+        b=RPnLwPI0vMJQD2VHy9dmykRuvXKofsArJSd6X6Fr3ZhXh0ZHwQ9vxX2Svc1Ty1cYrR
+         H+3BckhLCsYINfDwyRtRGWn+DDIMAsgBLJRivi261NH4uIyYlET7LAdeV/Y5+XF0Vl5y
+         dyGSwohvCMxAV4QHlBX8mEoKoqpemCLr66BrfuuPCMhwI6hfbB1wqV+zivAE8+cCz5lm
+         whOeaogN4n1+PhKnnM5tshUZg0xC92ryWzffAoSJqjbMkicqMCTP4wlZsleXGenhiWD4
+         K5FzDHaIE/Igzj2XxRUM7jjj5KKHg7MXPjaQwFqK//7Cc/eyePT3F+49mpGC7i8SDR6v
+         PEhA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:to:reply-to:subject:message-id:mime-version:from
+         :date:content-transfer-encoding:dkim-signature;
+        bh=UBLi/qIcHrIta/04vz1iJS3yHTD/ICMVXJHrjiEi1U8=;
+        b=SbRINM2xinuq2HFiVU1oQDgJemHLNROcDmwvnALSm+dntuoJcuv/TtZ4hSz3jO2BjS
+         slL+eMcezHRm1WldvGGzJkVJXB8mKSmR2EKs7ZdLWcFVN/kn32TFkcUdAbZIxDGFpYTv
+         cVrGSIGSl6HoBgKaS5zmA1j0Dd8HHDrAgNUste7tMfgtFgLtHBo6wslp8/bpL1q515lo
+         i7CpEKEIwiE7/jVd3MO/ViTHXeR/06y2rdhiNoMtq4xjKr8+h7wiv464zu1ftCCbR1PT
+         y2MpIX5GhBuNZrISVkM/ssc+zbM9Wc38048mU2Sy3ZJ9VnwuTpSUsYfwe5ds2ZlEqyOc
+         4+Xw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@sendgrid.net header.s=smtpapi header.b=F9+37cCX;
+       spf=pass (google.com: domain of bounces+8039335-49cc-sirdonaldfrancesco015=gmail.com@sendgrid.net designates 168.245.40.197 as permitted sender) smtp.mailfrom="bounces+8039335-49cc-sirdonaldfrancesco015=gmail.com@sendgrid.net";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=91mobiles.com
+Return-Path: <bounces+8039335-49cc-sirdonaldfrancesco015=gmail.com@sendgrid.net>
+Received: from o6.email.91newsletter.com (o6.email.91newsletter.com. [168.245.40.197])
+        by mx.google.com with ESMTPS id s3-20020a0562140ca300b00484af08adaasi416680qvs.536.2022.08.18.01.43.37
+        for <sirdonaldfrancesco015@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 18 Aug 2022 01:43:37 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+8039335-49cc-sirdonaldfrancesco015=gmail.com@sendgrid.net designates 168.245.40.197 as permitted sender) client-ip=168.245.40.197;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@sendgrid.net header.s=smtpapi header.b=F9+37cCX;
+       spf=pass (google.com: domain of bounces+8039335-49cc-sirdonaldfrancesco015=gmail.com@sendgrid.net designates 168.245.40.197 as permitted sender) smtp.mailfrom="bounces+8039335-49cc-sirdonaldfrancesco015=gmail.com@sendgrid.net";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=91mobiles.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:x-feedback-id:to:list-unsubscribe:cc;
+	s=smtpapi; bh=UBLi/qIcHrIta/04vz1iJS3yHTD/ICMVXJHrjiEi1U8=;
+	b=F9+37cCXEdj9BswYofizBNRZAt7v9eV/UznkT20o7PesoeyiHyiFJ9beoXpn5VWklN//
+	60qJms8hSa5IxmrdXUXKFyuTBG5sVTIalTWkQ4IgJnICQSjLVCBO8w3rMy8o48L+1sh+Eu
+	hqJ7O4E6RyvpiwwF75gfml2jTkqsYJJuw=
+Received: by filterdrecv-7988cddc67-b4hw9 with SMTP id filterdrecv-7988cddc67-b4hw9-1-62FDFBB6-2B
+        2022-08-18 08:43:34.730686747 +0000 UTC m=+2378353.971855409
+Received: from ODAzOTMzNQ (unknown)
+	by geopod-ismtpd-3-0 (SG) with HTTP
+	id vxci_S_LSh-MFLAee0rdow
+	Thu, 18 Aug 2022 08:43:34.500 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Date: Thu, 18 Aug 2022 08:43:37 +0000 (UTC)
+From: 91mobiles <info@em.91mobiles.com>
+Mime-Version: 1.0
+Message-ID: <vxci_S_LSh-MFLAee0rdow@geopod-ismtpd-3-0>
+Subject: 91weekly - Best gaming phones to buy across price ranges
+Reply-To: info@91mobiles.com
+X-Feedback-ID: 8039335:SG
+X-SG-EID: 
+ =?us-ascii?Q?wj8sSg9YY6fk4OqiR7g3KKZllSPDYuv5GCZMbuFE8LW8Tg=2FecrYOEBrgLuGC=2Fl?=
+ =?us-ascii?Q?KK1NgtMqPPLRtjl0MASZKTh2GYLNLK80oljxJAk?=
+ =?us-ascii?Q?oFymr1yWX9DJH0NUQfWHOkfvn8hm4wy0RwJApSB?=
+ =?us-ascii?Q?PhDllKuWVdGZUfwzMei5tY8Gnuh4QL5jBSVl+Jn?=
+ =?us-ascii?Q?RNoB=2FuAZSVB77oFnC4n+76oyVmZ7kjqukz2leSf?=
+ =?us-ascii?Q?jQpn5gcYMqxqX3lnHJm2xfMprhHIYlRDVw532rn?=
+ =?us-ascii?Q?PWpJKxMHXMgfsFbacni=2FA=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb6p8Shb=2FZDSyHBAetacBzcENAFrNFv2Ph4o1Xu5iMU?=
+ =?us-ascii?Q?gfbPx2f6zeqySluPaViiIjz7ZNM3xVUedd3V3Rz?=
+ =?us-ascii?Q?5hvhfpRMLOiv0UaetYxs5QFCUWfD3nKDvG=2FAkFW?=
+ =?us-ascii?Q?MQzKAr=2FA5zKcTcxVC9y9+c5PNc7=2FVHU=3D?=
+To: "sirdonaldfrancesco015@gmail.com" <sirdonaldfrancesco015@gmail.com>
+X-Entity-ID: ZnnyGq+t3dZbb3833iqmUQ==
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Cmailto=3Aunsubscribe=40sendgrid=2Enet=3Fsubject=3Dhttps=3A=2F=2Fu8039335=2Ect=2Es?=
+ =?us-ascii?Q?endgrid=2Enet=2Fwf=2Funsubscribe*q*upn=3DYTw6S3?=
+ =?us-ascii?Q?0ZEEc9JnBZch3HjKo-2FFRpytLj4tO9bHN23LT6?=
+ =?us-ascii?Q?yFnnoDztDTl3iYJgdceBm4kYR4U133iTkG-2BjN?=
+ =?us-ascii?Q?XXoTznrpx6bzblYcAbEB1VYU-2FIX7XaY2WpGcy?=
+ =?us-ascii?Q?MvP1Fk4CM3rNuKMsM10A6FPqPQ7barKUwxyBx6A?=
+ =?us-ascii?Q?CEn9blcsyEJ5q7SWt3M1rpf6Gd6oJbbAP12-2FB?=
+ =?us-ascii?Q?Tf4tomr-2B-2B14SV3G7aPTEaX-2F9Ut7Km37Ad?=
+ =?us-ascii?Q?aK5FAdq6r44zLO-2B6tIZTLudzeW6FN4TEN-2FI?=
+ =?us-ascii?Q?NAOxyAcmL4qIe3ok66c8U1DwYOk0gvwO5ttPRQx?=
+ =?us-ascii?Q?Nfo1y-2Bn8eUrvE3UXCvJxvgiRg-2BgToQ-2B4m?=
+ =?us-ascii?Q?5hwWM6OWKDlFTcxn91-2B0rqDK8m9RI-2BFpCni?=
+ =?us-ascii?Q?-2BOSP-2FwjhMGCPUz2A=3E?=
+
+
+<html>
+<head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+</head>
+
+<body>
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" height=3D"100%"=
+ width=3D"100%" id=3D"bodyTable" style=3D"background-color: rgb(255, 255, 2=
+55);font-family: 'Helvetica Neue'">
+       <tbody>
+        <tr>
+            <td>
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" style=3D"max-width:660px;table-layout: fixed;p=
+adding:10px; margin-bottom: 20px;">
+                  <tbody> =20
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <h1 style=3D"font-size: 18px;line-height: 22px;=
+font-weight: 500;margin-top:16px;">91weekly - Best gaming phones to buy acr=
+oss price ranges</h1>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>If you are planning to buy a new smartphone to enjoy the latest mobile gam=
+es, you could have a tough time deciding which option to go for. Right now,=
+ there are plenty of phones available in the market that offer great specif=
+ications at various price points. No need to worry, 91weekly is here to mak=
+e this task easier for you. Here we have compiled a list of best gaming sma=
+rtphones across price ranges you can buy right now. These phones offer grea=
+t display panels with high refresh rates, solid performance, great battery =
+backup, and many other features that make them ideal for gaming. Without wa=
+sting any time, let's get right into this list.</p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Best gaming phones across price ranges:</p>
+                            <ul style=3D"list-style:disc; line-height: 22px=
+;">
+                                <li>Under Rs 10,000 - Infinix Hot 10S</li>
+                                <li>Under Rs 20,000 - POCO X4 Pro 5G</li>
+                                <li>Under Rs 30,000 - POCO F4</li>
+                                <li>Under Rs 50,000 - iQOO 9T</li>
+                                <li>Above Rs 50,000 - ASUS ROG Phone 5s</li=
+>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=3D"2">
+                            <h3 style=3D"font-size: 16px;line-height: 22px;=
+font-weight: bold; margin-top: 20px;">Best gaming phone under Rs 10,000 - I=
+nfinix Hot 10S</h3>
+                            <img style=3D"max-width:100%;" src=3D"https://w=
+ww.91-cdn.com/images/best_gaming_phone_infinx_hot_10s.png" alt=3D"Infinx Ho=
+t 10s">=20
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <table style=3D"width: 100%;line-height: 22px;t=
+ext-align: left;margin: 20px 0px;">
+                                <thead>
+                                    <tr>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Pros</th>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- 90Hz smooth display</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Slow Charging</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Good performance</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- HD+ resolution</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Great battery life</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- micro-USB charging port</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Price - Rs 9,999</p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Features, comparisons, and more - <a style=3D"color:#f45511" href=3D"https=
+://u8039335.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjrTRC37w0E=
+I9KLJm4Bx9vGg-3D6ae4_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DY=
+O4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtrG3HUQsC4r53BpLCPbbeNDiv6gtcUrF2bm-2FTPW=
+lYYtvpESFCO8QWIklb3X5kclpTahD3LHWhaWSjmG-2FdvBSGjIHxONTYakXT9AgNX6MMuCAcrZE=
+MibIgQSHGosC5Di4wwjEryofwkNFJLcAA-2BhIlLBh3a9IxYjut8C6l7OJcHvRzZzuu958qDG-2=
+FMKCKmOPAGdqUEDIYQINvFFBcS7WJalrOnULRGrqluHs-2BfC13Fr03JOlz-2B081HcBibFPfiM=
+gEEXTaDHAmlkU6eCNiwL2Fl-2FA-3D" target=3D"_blank">https://bit.ly/3K2BSZa</a=
+></p>
+                            <h3 style=3D"font-size: 16px;line-height: 22px;=
+font-weight: bold; margin-top:5px;">Best gaming phone under Rs 20,000 - POC=
+O X4 Pro 5G</h3>
+                            <img style=3D"max-width:100%;" src=3D"https://w=
+ww.91-cdn.com/images/best_gaming_phone_poco_x4_pro.png" alt=3D"POCO X4 Pro =
+5G">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <table style=3D"width: 100%;line-height: 22px;t=
+ext-align: left;margin: 20px 0px;">
+                                <thead>
+                                    <tr>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Pros</th>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Bright AMOLED display</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Still on Android 11</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- 67W fast-charging</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Processor could have been better</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Dot-notch design is non-interrupting</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Price - Rs 18,999</p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Detailed review - <a style=3D"color:#f45511" href=3D"https://u8039335.ct.s=
+endgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjtjzMPRMFlUNwLQJuISqnLg-3D=
+y55e_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4ktF1DXohiE5K8Z=
+xOdl8QYTQxhYRJB6HCts11xiycMCqgC6OVOPB2FMl6NNjavMGs5oXFEMCu-2BPW5RF-2FMMPpHJ=
+Z-2BoXI6NEDpbQFvj3IjKcjDvz-2Fs-2F7NN8i9io60LZ1A2x31bb8rHsoj7HhY51wPTijC-2Bv=
+pcMkAq-2BekeEY01obznzkmnNqBv-2BnuwgiSlB2PRgWNN5Tl-2FxalC1p3rRrzVEphQlt6NBJ3=
+Zt-2FtLPwavZWBV1NUyjDPQIfDJzVwx-2BeLRfAid8rSfNBmCwgB6ay8Z7QWHflBm-2BTfQvtjx=
+MM27FaCcjoyb7mwYB6vhI-3D" target=3D"_blank">https://bit.ly/3vYoaRt</a></p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Features, comparisons, and more - <a style=3D"color:#f45511" href=3D"https=
+://u8039335.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjiHrUgVp7h=
+NrICHi1IBxAZs-3DivsD_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DY=
+O4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtsuF0daIr1-2FdjCu-2Bzg7lRxn7SjO-2B2Vd-2FL=
+T2hjXZALy2-2BFoaEfhiVKfUvUtieFaW41Kw-2BzsjDnu-2BBnTLtiNrThap303uo1zAlBzIaiB=
+-2Bg5EWaiXmJlgVR5GO8KA0666ZRsOayGHXwJ26jENIvZmkcFc-2BasMyh8Vo0wIkKEJbsO6bD-=
+2BzWP-2BfwXhiNqnjAvHQw7fJT1bYD77dKThMS3n1i9iLNqIC-2FshO-2Fm-2BFFGvYbW5fPGMR=
+adFkeZ-2FAD6nzI3YsvRumxUufZ1wlwwDyeHtlfTFbc-3D" target=3D"_blank">https://b=
+it.ly/3dlZ60a</a></p>
+                            <h3 style=3D"font-size: 16px;line-height: 22px;=
+font-weight: bold; margin-top:20px;">Best gaming phone under Rs 30,000 - PO=
+CO F4</h3>
+                            <img style=3D"max-width:100%;" src=3D"https://w=
+ww.91-cdn.com/images/best_gaming_phone_poco_f4.png" alt=3D"POCO F4">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <table style=3D"width: 100%;line-height: 22px;t=
+ext-align: left;margin: 20px 0px;">
+                                <thead>
+                                    <tr>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Pros</th>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Class-leading performance</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Ships with bloatware</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- 120Hz smooth display</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Uninspiring design</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- 5G support</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Price - Rs 27,999</p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Detailed review - <a style=3D"color:#f45511" href=3D"https://u8039335.ct.s=
+endgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjoaYE2dJcjirTX-2FrUXk24Ls-=
+3DzbDP_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4ktF1DXohiE5K=
+8ZxOdl8QYTQxhYRJB6HCtjM4dWOgkpAXvWVJZ6QmXubHI-2B0ObIJFk2SFeHcmsZnl1FCemUSYv=
+suMWmUgHu1L0pXPf8X9uel6PNO5JmVS4fWxH2ku1tyQ-2BSgzL7ten-2BAhGocRY-2BnpaQGT7F=
+omD8oud-2BIIBY0uY7OpFjPtZb7bco4cA6w1R1trtLHMEgQPSqjZ7anCioobeHT5jBKEejyi0x1=
+V-2B-2FcBNAg65BMQj70K-2Bpxtlb94XGQ7DihsAlptXzynUhEFWf0XEnmBLApJVKGjhs59PAoL=
+Q62lA38nUKGwTw0-3D" target=3D"_blank">https://bit.ly/3PwaN1J</a></p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Features, comparisons, and more - <a style=3D"color:#f45511" href=3D"https=
+://u8039335.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2Bjli6jMcmA5=
+Ci6CKOHPdmrZw-3Djilf_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DY=
+O4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtr7LEcgPSGRXhOj9j0NFTfZSRZWo9kBxhiGdeRHnS=
+WzxuLZsrHcHSoXGsYY0kdhVfR-2FQaYnDKkLm-2F7gE-2B8zgzQTZrj7P5S27UBuraEIIyFpLfX=
+D6l4jTvWRrKKZK1UJBkOW-2BFNTTUrVFOneZQ3xf9V4GlSbcvAeNZjQXtwrYloSvJyYgqDEIKFL=
+UHWHMtFmtnEUoiWGvRhFiJW0Q-2FxptSgSBzHsnNGKXmrG5ASiAvKrSCiCNkw8ApkqQhTxUU473=
+4g5cxcF-2BjyJGaXiNp0MiOno-3D" target=3D"_blank">https://bit.ly/3QzgtZZ</a><=
+/p>
+                            <h3 style=3D"font-size: 16px;line-height: 22px;=
+font-weight: bold; margin-top: 5px;">Best gaming phone under Rs 50,000 - iQ=
+OO 9T 5G</h3>
+                            <img style=3D"max-width:100%;" src=3D"https://w=
+ww.91-cdn.com/images/best_gaming_phone_iqoo_9t.png" alt=3D"iQOO 9T 5G">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <table style=3D"width: 100%;line-height: 22px;t=
+ext-align: left;margin: 20px 0px;">
+                                <thead>
+                                    <tr>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Pros</th>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Class-leading performance</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- No IP dust and water resistance rating</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- 120W fast charging</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Excellent design</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Price - Rs 49,999</p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Detailed review - <a style=3D"color:#f45511" href=3D"https://u8039335.ct.s=
+endgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjmnyhHp-2BaAAVcuIlvG2K34k-=
+3D2_ap_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4ktF1DXohiE5K=
+8ZxOdl8QYTQxhYRJB6HCtteE6Z8oluPyHoQ5j31LWqLiGgkfbc8jR-2Bv0dy9VW1N9GvaCkvhOx=
+JiFFDQkaDFmTiQF7DdcYQ1cNW8KUdGUIbtnIZZhQXZKrwINDNHjQn1-2BHQ2C-2Bknpdw9wgfNt=
+FHKQ5fuAbZt5jwOKZAY2Q0qvxjMioHqtpThrk1IP1-2FiYX6IXOdsUh7BgE1DeU1GBx-2BK6XEb=
+cXKC0rP0HI4tESSURbtpbBRTT7AuZpuAV-2FUErQAEooZMUIszHdv5-2B3yOCkqd4yOjqf-2BoA=
+-2FIeG0zcdqZKM35I-3D" target=3D"_blank">https://bit.ly/3C1uzz8</a></p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Features, comparisons, and more - <a style=3D"color:#f45511" href=3D"https=
+://u8039335.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjjX9-2FI2C=
+2Sh7AVWtv2I-2F-2Fp4-3Dkp66_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeV=
+Ko68DYO4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtonqaQNJ64lufNR4LhUupReJV410LoqqWNy=
+5aKOrWnE6N9vAW7NZ3zck0N0MwS9-2FBjfVopz4JrguR9R-2FvcLDlj-2BChaRSGMrIZIxAUG7U=
+aa2-2FLLZFsNFHCxVZwlXH6-2F8ukAOoVjfHwBqS2i1Bdb2A4bwHVjcRf-2BdZPjLYTzh8SfOTY=
+Y12nWiQghxoCc-2BuCdvVqjFEIXsz9Al3gMoj6E21bq4RvOK0S8XaNl4SV3u2aMHDvoBIHLM4y8=
+f3cnGd0urRxHR62rRgcfJZKbPcA2YMux8-3D" target=3D"_blank">https://bit.ly/3OWY=
+7QZ</a></p>
+                            <h3 style=3D"font-size: 16px;line-height: 22px;=
+font-weight: bold; margin-top: 5px;">Best gaming phone over Rs 50,000 - ASU=
+S ROG Phone 5s</h3>
+                            <img style=3D"max-width:100%;" src=3D"https://w=
+ww.91-cdn.com/images/best_gaming_phone_rog_5s.png" alt=3D"ASUS ROG 5s">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <table style=3D"width: 100%;line-height: 22px;t=
+ext-align: left;margin: 20px 0px;">
+                                <thead>
+                                    <tr>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Pros</th>
+                                        <th style=3D"padding-bottom:10px; t=
+ext-align:left;">Cons</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Stunning 144Hz display</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Bulky</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Outstanding performance</td>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- No IP dust and water resistance rating</td>
+                                    </tr>
+                                    <tr>
+                                        <td style=3D"padding-right:10px; ve=
+rtical-align: text-bottom;">- Customisable shoulder triggers</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style=3D"font-size: 16px;line-height: 22px;" co=
+lspan=3D"2">
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Price - Rs 55,999</p>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Features, comparisons, and more - <a style=3D"color:#f45511" href=3D"https=
+://u8039335.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjhyBI4nG18=
+h-2FQz5Im8Yf8Eo-3Do6Ud_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68=
+DYO4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtgn4S5sHPY73JQx1SGTvJEgE2hAx4dGChh8QP3e=
+1JWc1MxY2qtCzlUC98P9Of2qjQqdiOKE7KxDJOfe08b-2Ffo1bXLaLzXOeKx7w5kPITcaXnDbIo=
+VcpYDyak-2BGx9rpfAQiGdM6DaF8OWoVtfXfvZrscUkRFA7kbL02L-2BCcirQgo94duYUZISmyt=
+aTuAKk4LleqlqbxbFSQ7FNS7Fn1dUSFTnRJzBHt-2FoUylOvOV9WuwRxIRve4k5D2GgU5k4L8J7=
+tWmg1racuCAdGP5s63YtRdA-3D" target=3D"_blank">https://bit.ly/3QwkbUs</a></p=
+>
+                            <p style=3D"font-size: 16px;line-height: 22px;"=
+>Detailed review - <a style=3D"color:#f45511" href=3D"https://u8039335.ct.s=
+endgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjvcLwizy5jGknr2h7ykXbZ0-3D=
+OL1E_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4ktF1DXohiE5K8Z=
+xOdl8QYTQxhYRJB6HCthCznHlqUyW2NQIvPqwZRWfrhrZi47ITo6CuwEur1yq1CxgR-2BHxI25y=
+peGybj0sIo-2BS-2F6ys8Mx9xWTZFd1PMulBi4j8F1fvHxYszZ8Bgo4BJuCHGGtS3oGTkcv1RQi=
+sc2DgKURa9mtaa0etDTNHLfxnvsClsc6nUTA-2FfVS1caRa1jGimv9z9bUIZ0-2BbvJh2tUb0J9=
+56QyPhMMW8PQcTdk14kTWI6ovsKABuXKfvlSktuLeYvnS8KftmYytG6-2Bk5CYttyAxMl72cPi2=
+wQ22WVeEw-3D" target=3D"_blank">https://bit.ly/3QxErVL</a></p>
+                            <p style=3D"font-size: 16px;line-height: 22px; =
+font-weight: 500;">Read more about these phones and the full article here: =
+<a style=3D"color:#f45511; font-weight: 400;" href=3D"https://u8039335.ct.s=
+endgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjvfX5N3q2wDSWvsX0ew3Rhk-3D=
+iLSE_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4ktF1DXohiE5K8Z=
+xOdl8QYTQxhYRJB6HCtmvL-2B0TlvG1l6jDvNfLzIBjxxU2WcRZpovpYfSBzowmpbVthgCXC9GH=
+Ufb35vOkHPtE2hqm0AQbnGWKuFyctTFMoMZae-2B2dMbIBMqEVw4Pl6qWi4xAM55GCr-2BFKVHE=
+L-2BTT7DWLbkGYQZHM-2BTuaX5L4ahRuzDGlq0-2BWoelm1XqD4bh66ureCVCdEuZJRSTkfxolE=
+r01AGDsVnatDcdz9Pnf2uwT5f78ruJahDu74YY0yDdg1gezYZJXgfWnslQrIqFnWuFGvMlKd-2F=
+w7Tcn9YuFz4-3D" target=3D"_blank">https://bit.ly/3bXcw2x</a></p>
+                            <h3 style=3D"font-size: 18px;line-height: 22px;=
+font-weight: 500;margin-top:16px;">In-depth articles</h3>
+                            <a style=3D"font-size: 16px;line-height: 22px; =
+color:#f45511; display: block; margin-bottom: 5px;" href=3D"https://u803933=
+5.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjqojLSt9tzhmxJNlsK3Z=
+MsqKPH71ktA3ERQ-2BR63ukS1GIzcbQ-2BfhM1BReYUYQOV30Fg85FpR7JbTMWoqiBL3QOvxs0J=
+d73QzdQ9MtiBGruAvF8U8_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68D=
+YO4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCth7i-2FmyOD-2FCTPg3hVU8NDQc9Qgtw6i-2BzNh=
+W0-2BJDwatyDswz2srmIq4MvWNfX2i8F7yMAKf-2FpWQwI8n-2F3VBw-2FV0Z19TqXCLP9M1-2F=
+sqWJRBDvKsJvvxFgVMpxwWB-2BxAlVjzp-2FqR-2FUKKgw70OZ44nNAjlcOLMKCTGhK2Hx-2FRk=
+vTNBGJ9L5F4t91tMsurqxt-2B0XxwMycdBdBmQ1kuaeQE8zozUaH-2BBj4gWgg2yjDQf-2FvhZL=
+h-2BkzAZ6N9AXNWEMhB43-2F9c5m0oNqThdd9iJOoSaPv6gs-3D" target=3D"_blank">Call=
+ of Duty: Modern Warfare 2 beta dates revealed</a>
+                            <a style=3D"font-size: 16px;line-height: 22px; =
+color:#f45511; display: block; margin-bottom: 5px;" href=3D"https://u803933=
+5.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjqojLSt9tzhmxJNlsK3Z=
+MspFjDxOfjuLloTUsdEIaEQKmHiwU3ifuNL9Byrcf61VYc2Xnqy3yXUqmNT4K44sASNJuJlHfHw=
+uNvaGTdKqY96jz1XJ_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4k=
+tF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtmfdQXXxTEvwZtfWe7P7ASpEpeqni26X1Zxnw0PPKT5q=
+nUoA9WoE8t5sbfYUL1O8LSX69BmACWYtSiHjscg7BP5VeeILZfx0I4KKd27I5pZEz4QUnfPw6XX=
+oRSNYKelKAfKxR1K4ys-2F83J3TTqjTB4TOkXZ2sD-2BJu6GQc83jF-2FQBl5SX8moWPUXoAwOy=
+T0cUGTnSn-2FaG1-2BHtxW4xlMJkx5CXesYdbP-2F-2B6MFGltSRzeBkrSpviY8JlIW9gvUf9H4=
+pyjW0DSFN0AgJMq5WvPQoY8k-3D" target=3D"_blank">BGMI ban in India not perman=
+ent, will be back soon, says Skyesports CEO Shiva Nandy</a>
+                            <a style=3D"font-size: 16px;line-height: 22px; =
+color:#f45511; display: block; margin-bottom: 5px;" href=3D"https://u803933=
+5.ct.sendgrid.net/ls/click?upn=3D4jns7rA3MqGeey8ociK-2BjqojLSt9tzhmxJNlsK3Z=
+MsqWDrxG-2BvOWKu2kxTjt6MGa8VpEFzEvoLTsGtLbwgkJVNSurYhprUa7FoJqxcQ4rmPkflGZP=
+d2zzm1wzKy-2F-2FfRBu0tr_2CWYY-2BEEkt-2BYH5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo6=
+8DYO4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCthq7rhqqUO4-2FUbMk8owTRGt5fY-2Be9-2FXP=
+c6y-2FSJZGT-2BqJaJQAUnaRb6rNPYrJQeiTV2luMyrb0po1hIhwHhg0webk3UrZpAdrLyz8oiv=
+dATVDOeMNvXr-2F8XsSMeOzhna9oM2SgzGOHwYJRjpVTdp-2FtkJXPo4PhqRP0mRVohlo7YA8eE=
+45YD1RV0bmnrR1SZJ-2Fc4sg9jWLjN0xB-2BuaK9YYieeuwVl0aebdSWffOB9mqvobUn57y0ZrT=
+cq76LoqiKC4tdE8ad9YscNCJXRssoKAxEE-3D" target=3D"_blank">PS Plus Extra, Del=
+uxe free games for August 2022 revealed</a>
+                            <a style=3D"font-size: 16px;line-height: 22px; =
+color:#f45511; display: block;" href=3D"https://u8039335.ct.sendgrid.net/ls=
+/click?upn=3D4jns7rA3MqGeey8ociK-2BjqojLSt9tzhmxJNlsK3ZMspeHr3TwOtoISuagm75=
+MGwEPWuHVWB3-2FyGzd6czlDvoGs47I3l48rz-2FdKf4sgtoxrc-3DpXKx_2CWYY-2BEEkt-2BY=
+H5wkhBNSPcXvle6YHPS6e8FSEQu9JdeVKo68DYO4ktF1DXohiE5K8ZxOdl8QYTQxhYRJB6HCtvm=
+ULoIe7Pn7L77Ss4ef-2B6eZZjcqo8MzNwyCBpoLJigAAEhVZK-2BHYWUMU64K-2FeqWRLoNRMU-=
+2BUCWtq6f3BxEjlRr-2BFFE66sy0ddFmKuSD62bzWz-2BihjkQaV0xXtlvqIURlN7hUrcalLDSr=
+sXKvizvbRNMF2CGjkc0vGyJ7Gpo004Wms1Uyj4sc9BylYfzs6Os5atdY8SUfnH8yNZGxqcyPLJ7=
+xnkgav6rxZOeSDFWvJVXb40zdMvykN-2BNT2UwNg5giwDyvZCQiKgwNQ0BL-2FbdpSs-3D" tar=
+get=3D"_blank">Indian battle royale game Indus gets action-packed first tra=
+iler</a>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+            </td>
+        </tr>
+       </tbody>
+    </table>
+<p>If you&#39;d like to unsubscribe and stop receiving these emails <a href=
+=3D"https://u8039335.ct.sendgrid.net/wf/unsubscribe?upn=3DYTw6S30ZEEc9JnBZc=
+h3HjKo-2FFRpytLj4tO9bHN23LT6yFnnoDztDTl3iYJgdceBm4kYR4U133iTkG-2BjNXXoTzvtA=
+vNgJdhUK7t-2B-2BipXRxB-2BR2I0R8RSQGu3QSHTziTZ1rXLnLAXXKpdfhgCVXzGUeUkzvd-2F=
+hCkOvRDBZsxxuDPDNQlHROAVApg9YsWoGTsYJua6YJ5JWv-2BLCBj843Etfwk1zuOd8srMD7ZYY=
+U0tLAMy3YE9sfCTqPiTHXuYsAKRKt1LqY9UR6oMFrsnI11jwJgcySVpBqSQCJczllGywQhDJikO=
+fqgeKvt1KI-2BkOPcyGjsAquOrUbNd6XwdnFNNwt8WPpIG7IJYLPasBB3NLZLyoFuY-2FojaLmP=
+bCZx3LKmxh"> click here </a>.</p>
+<img src=3D"https://u8039335.ct.sendgrid.net/wf/open?upn=3DYTw6S30ZEEc9JnBZ=
+ch3HjKo-2FFRpytLj4tO9bHN23LT6yFnnoDztDTl3iYJgdceBm4kYR4U133iTkG-2BjNXXoTznp=
+-2BOSeFirTn8-2BhxKWTCQsjg-2FK9W5y4FCVp5ruKlQ8bgU4U0wPntH2E91NcL4YrU2D9k-2Fu=
+CEXHOzikm0vsHHCXgNCytMK-2BFmrHkq875fIeYsXcly3gNNvDWdixOvB-2BmguEVPwlgz6A-2F=
+-2B-2Fpqjy4cHp7abC9YR5r6aB3VRXGhHnTl8xvg6v-2FMvqm1J9uX89YEW08h8Gn9NaKiOWqFb=
+do-2BO0hV-2BHSFrPG6Muc-2FQpXpmSWCipr-2BmptgdLU5uI8iFiU59RRRivLkyO1MgotyJEEX=
+6IgM-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px=
+ !important;width:1px !important;border-width:0 !important;margin-top:0 !im=
+portant;margin-bottom:0 !important;margin-right:0 !important;margin-left:0 =
+!important;padding-top:0 !important;padding-bottom:0 !important;padding-rig=
+ht:0 !important;padding-left:0 !important;"/></body>
+</html>
