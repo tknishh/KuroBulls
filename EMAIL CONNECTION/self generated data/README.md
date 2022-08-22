@@ -1,4 +1,4 @@
-# Uderstanding the data generation code
+# Understanding the data generation code
 
 ### 1. From user mails
 This file contains the code to generate random email ids for a particular user.
