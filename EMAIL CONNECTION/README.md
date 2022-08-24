@@ -9,7 +9,7 @@
 ### Working of the longest path concept:
 ![image](https://user-images.githubusercontent.com/74897823/186481985-2bf10a0f-dae5-4c53-af42-ac486975be3e.png)
 
-Assuming we have this graph, the longest path from the starting node "A" to the ending node "C" will be  A --> B --> D --> E --> F --> C.
+Assuming we have this graph, the longest path from the starting node "A" to the ending node "C" will be  ```A --> B --> D --> E --> F --> C```.
 
 We have marked the length between the nodes with the relevancy score.
 
