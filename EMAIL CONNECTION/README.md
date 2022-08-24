@@ -21,3 +21,6 @@ Now, if ```Rev_total > 0.6``` then email is ```not spoofed```.
 if ```Rev_total <= 0.6``` then the email will be marked as ```potential spoofed email```.
 
 To check the how the 0.6 probablity comes here check the hypothessis testing excel file.
+
+### What we need
+A cypher query that searches the longest path and retruns the summation of the relevancy score between them.
