@@ -9,13 +9,13 @@ import pandas as pd
 s3Client = boto3.client('s3')
 
 def email_to_dict(file_path):
-  with open(file_path, 'rb') as fp:
-    msg = BytesParser(policy=policy.default).parse(fp)
-  entities = msg.keys()
-  emailData= {}
-  for entity in entities:
-    emailData.update({entity : msg[entity]})
-  return emailData
+    with open(file_path, 'rb') as fp:
+        msg = BytesParser(policy=policy.default).parse(fp)
+    entities = msg.keys()
+    emailData= {}
+    for entity in entities:
+        emailData.update({entity : msg[entity]})
+    return emailData
 
 def lambda_handler(event, context):
 
