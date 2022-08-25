@@ -17,7 +17,7 @@ where x is the set of Relevancy Score
 
 ![image](https://user-images.githubusercontent.com/74897823/186653579-619e0dd8-fb5d-4d28-a50f-9c9f55807a14.png)
 
-*```Let the number of nodes = i```
+* ```Let the number of nodes = i```
 * ```Longest path from A to C: A-B-D-F-E-C```
 * ```Total Length / Rev_Total = Rev_Ab + Rev_Bd + Rev_Df + Rev_Fe + Rev_Ec```
 * ```Maximum Length = 1 * (i-1) ```
