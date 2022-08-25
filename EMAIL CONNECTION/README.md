@@ -1,3 +1,12 @@
+# PROBLEM 
+Spoofing an email is pretending to be a legitimate sender, such as an online retailer or website owner. The victim's email address is used by cybercriminals to attempt to access their personal data. They can get the victim's name, address, credit card information, social security number, passwords, and other personal information.
+
+## Let's take an example of a real-life situation to understand the problem better.
+
+Let’s say the head of the finance department sends frequent mails to his employee for making some transactions. An email spoofing attack can easily happen here. The attacker can target the head of the department and can send a spoofed mail to any of the employee asking to make transactions to any of his personal account. 
+
+An attack here can be very dangerous for the organization and thus we present a solution for the same.
+
 # USING EMAIL CONNECTION TO DETECT A SPOOFING ATTACK
 
 1. Using the concept of email connections we came out with a solution to detect spoofing attacks that happen intra-organization.
