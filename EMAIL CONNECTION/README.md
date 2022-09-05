@@ -32,4 +32,4 @@ if ```Rev_total <= 0.6``` then the email will be marked as ```potential spoofed 
 To check the how the 0.6 probablity comes here check the hypothessis testing excel file.
 
 ### What we need
-A cypher query that searches the longest path and retruns the summation of the relevancy score between them.
+A cypher query that searches the longest path and returns the summation of the relevancy score between them.
